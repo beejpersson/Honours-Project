@@ -24,8 +24,6 @@ namespace Vuforia_HoloLens_Sample
 
         public virtual void Initialize(CoreApplicationView applicationView)
         {
-            // UnityEngine.XR.XRDevice .SetTrackingSpaceType(UnityEngine.XR.TrackingSpaceType.Stationary);
-
             applicationView.Activated += ApplicationView_Activated;
             CoreApplication.Suspending += CoreApplication_Suspending;
 

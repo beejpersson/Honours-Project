@@ -6,8 +6,7 @@
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
 Vuforia HoloLens Sample.sln: 8F1E91D2B7FBD584D60DE36B5B5B9064
-Vuforia HoloLens Sample.sln.metaproj: 1EE697AD4AA7DDFE9350BB087D1EF672
-Vuforia HoloLens Sample\App.cs: modified
+Vuforia HoloLens Sample\App.cs: D4F3E9CD20B798627675B413EC2F69D9
 Vuforia HoloLens Sample\Package.appxmanifest: 3856666F5CD7B5F565BC051977A23921
 Vuforia HoloLens Sample\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Vuforia HoloLens Sample\Vuforia HoloLens Sample.csproj: D1310C72BC9EDADFCA60F636014FA639
@@ -18,11 +17,5 @@ Vuforia HoloLens Sample\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870
 Vuforia HoloLens Sample\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
 Vuforia HoloLens Sample\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 Vuforia HoloLens Sample\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
-Vuforia HoloLens Sample\bin\x86\Master\AppX\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
-Vuforia HoloLens Sample\bin\x86\Master\AppX\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
-Vuforia HoloLens Sample\bin\x86\Master\AppX\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
-Vuforia HoloLens Sample\bin\x86\Master\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
-Vuforia HoloLens Sample\bin\x86\Master\AppX\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
-Vuforia HoloLens Sample\bin\x86\Master\AppX\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
 Vuforia HoloLens Sample\obj\x86\Master\Vuforia HoloLens Sample.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
 Vuforia HoloLens Sample\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826

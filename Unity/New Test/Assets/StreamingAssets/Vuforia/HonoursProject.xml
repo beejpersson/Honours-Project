@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="OpenGLBookBox.Bottom" size="0.097000 0.182000"/>
+        <ImageTarget name="OpenGLBookBox.Front" size="0.097000 0.243000"/>
+        <ImageTarget name="OpenGLBookBox.Left" size="0.182000 0.243000"/>
+        <ImageTarget name="OpenGLBookBox.Back" size="0.097000 0.243000"/>
+        <ImageTarget name="OpenGLBookBox.Right" size="0.182000 0.243000"/>
+        <ImageTarget name="OpenGLBookBox.Top" size="0.097000 0.182000"/>
+        <ImageTarget name="AccessoryBox.Bottom" size="0.145000 0.102000"/>
+        <ImageTarget name="AccessoryBox.Front" size="0.145000 0.026000"/>
+        <ImageTarget name="AccessoryBox.Left" size="0.102000 0.026000"/>
+        <ImageTarget name="AccessoryBox.Back" size="0.145000 0.026000"/>
+        <ImageTarget name="AccessoryBox.Right" size="0.102000 0.026000"/>
+        <ImageTarget name="AccessoryBox.Top" size="0.145000 0.102000"/>
+        <MultiTarget name="OpenGLBookBox">
+            <Part name="OpenGLBookBox.Left" translation="-0.048500001430511475 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="OpenGLBookBox.Right" translation="0.048500001430511475 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="OpenGLBookBox.Front" translation="0 0 0.09099999815225601" rotation="AD: 1 0 0 0"/>
+            <Part name="OpenGLBookBox.Back" translation="0 0 -0.09099999815225601" rotation="AD: 0 1 0 180"/>
+            <Part name="OpenGLBookBox.Top" translation="0 0.12150000035762787 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="OpenGLBookBox.Bottom" translation="0 -0.12150000035762787 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="AccessoryBox">
+            <Part name="AccessoryBox.Left" translation="-0.07249999791383743 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="AccessoryBox.Right" translation="0.07249999791383743 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="AccessoryBox.Front" translation="0 0 0.050999999046325684" rotation="AD: 1 0 0 0"/>
+            <Part name="AccessoryBox.Back" translation="0 0 -0.050999999046325684" rotation="AD: 0 1 0 180"/>
+            <Part name="AccessoryBox.Top" translation="0 0.013000000268220901 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="AccessoryBox.Bottom" translation="0 -0.013000000268220901 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+    </Tracking>
+</QCARConfig>

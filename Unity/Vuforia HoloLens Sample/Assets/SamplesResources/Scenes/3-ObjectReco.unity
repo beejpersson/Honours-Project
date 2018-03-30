@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 1
+  mWorldCenterMode: 2
   mWorldCenter: {fileID: 0}
 --- !u!81 &373593716
 AudioListener:
@@ -804,17 +804,17 @@ MonoBehaviour:
   m_Script: {fileID: -780924145, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Habitat
+  mTrackableName: Pomodoro
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VuforiaMars_Object_OT.xml
-  mExtendedTracking: 0
+  mDataSetPath: Vuforia/HonoursProject_OT.xml
+  mExtendedTracking: 1
   mAspectRatioXY: 1
   mAspectRatioXZ: 1
-  mShowBoundingBox: 0
+  mShowBoundingBox: 1
   mBBoxMin: {x: 0, y: 0, z: 0}
   mBBoxMax: {x: 0.1, y: 0.1, z: 0.1}
-  mPreviewImage: {fileID: 2800000, guid: f78768649fe34456b19d6fc2fb6eac90, type: 3}
+  mPreviewImage: {fileID: 2800000, guid: a9ae2a68d9ae4c71b1c43a6637ccb84f, type: 3}
   mLength: 0.1
   mWidth: 0.1
   mHeight: 0.1
@@ -1254,7 +1254,7 @@ Prefab:
     - target: {fileID: 9500000, guid: 531a4d65d89efb54db83139ba047c193, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d7cbec3ad394a9f439e1f263dd9eb830, type: 2}
+      objectReference: {fileID: 9100000, guid: 65090b60d39188e44baa55f6244f67f0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531a4d65d89efb54db83139ba047c193, type: 3}
   m_IsPrefabParent: 0
