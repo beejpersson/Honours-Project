@@ -20,6 +20,7 @@
 \usepackage{array} % for better arrays (eg matrices) in maths
 \usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{hyperref} % adds \url command for hyperlinks in text
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 \usepackage[toc,page]{appendix}
 % These packages are all incorporated in the memoir class to one degree or another...
@@ -86,16 +87,14 @@ Insert acknowledgements here
 \newpage
 
 
-\section{Title of section would go here}
-You can fill out sections as you please. \\ %adds a line brake
+\section{Introduction}
+\subsection{Background}
+This project has three main background components to discuss. These are mixed reality, the Microsoft HoloLens and Vuforia.
+\subsubsection{Mixed Reality}
+Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them. \cite{lamport94}
+\subsection{Aims and Objectives}
 
-Most of the formatting is taken care for you but you can add this yourself as you please.
-
-\subsection{Title of subsection would go here}
-Or have sections that are relevant to your main body of work above but warrant there own section. Both - with numbering would be entered into the Table of contents.
-
-
- \subsubsection{Overview Of Project Content and Milestones}
+\subsubsection{Overview Of Project Content and Milestones}
 
 This is a sub sub section with a list of bullet points.
 \begin{itemize}\itemsep0pt
@@ -106,9 +105,18 @@ This is a sub sub section with a list of bullet points.
 \end{itemize}
 
 
-\section{Chapter 2}
+\subsection{Scope and Limitations}
+
+\subsection{Structure of this Dissertation}
+
+\section{Methodology}
 And so on for each of the chapters.  The template automatically starts new chapters on a new page.  The associated guidelines tell you what the available styles do and also how to structure a report.
 There is a section break on this page that you should be careful NOT to delete otherwise the references and appendices will be numbered continuously with the rest of the document.
+
+\section{Evaluation}
+
+\section{Conclusion}
+\subsection{Future Work}
 
 % another example section
 \section{Additional Information / Knowledge Required}
@@ -132,16 +140,84 @@ So on and so forth...
 %you can crate this on a extra tex document just like the title or any other part of the document.
 \newpage
 \begin{appendices}
-\section{Project Overview}
-%insert IPO
+\section{Initial Project Overview}
+ \ \\ \textbf{SOC10101 Honours Project (40 Credits)} \\ \\
+\textbf{Title of Project:} \\
+Real world object-capture in a mixed-reality environment. \\ \\
+\textbf{Overview of Project Content and Milestones:} \\
+This project will look to evaluate the effectiveness of capturing real world objects using Vuforia on the Microsoft HoloLens. Initially, a method to capture a simple object will be developed, before attempts to capture more complex (or multiple) objects and real-time object manipulation will be implemented. The project aims to explore to what extent this can be done. \\
+The milestones will be: 
+\begin{itemize}\itemsep0pt
+	\item simple object capture
+	\item simple object manipulation
+	\item complex object capture
+	\item real-time object manipulation.
+\end{itemize}
+\textbf{The Main Deliverable(s):} \\
+Object capture and manipulation software. \\
+Dissertation. \\
+Poster. \\ \\
+\textbf{The Target Audience for the Deliverable(s):} \\
+Technical mixed-reality game developers looking for new game mechanics. \\
+Enthusiasts interested in new game technologies. \\ \\
+\textbf{The Work to be Undertaken:} \\
+Research similar attempts at mixed-reality object manipulation. \\
+Design a method to capture a cube (or similar object) using Vuforia. \\
+Build and apply simple shaders to the object. \\
+Expand on above methods to capture more complex objects. \\
+Explore and evaluate the extent to which the objects can be manipulated in real-time. \\
+Document and report findings. \\ \\
+\textbf{Additional Information / Knowledge Required:} \\
+Creating and managing Unity projects. \\
+How to use Vuforia. \\
+Improve understanding of shader usage. \\ \\
+\textbf{Information Sources that Provide a Context for the Project:} \\
+General Development Page for the HoloLens: \\
+\url{https://developer.microsoft.com/en-us/windows/mixed-reality/development} \\
+Some related downloadable tools: \\
+\url{https://developer.microsoft.com/en-us/windows/mixed-reality/install_the_tools} \\
+Vuforia Specific: \\
+\url{https://developer.microsoft.com/en-us/windows/mixed-reality/vuforia_development_overview} \\
+\url{https://developer.vuforia.com} \\ \\
+\textbf{The Importance of the Project:} \\
+Mixed-reality is an emerging games technology with great potential for immersive story-telling and innovative game design. This project looks to explore an aspect of that and if successful could be beneficial to those interested in designing such games. \\ \\
+\textbf{The Key Challenge(s) to be Overcome:} \\
+Lack of similar projects documented. \\
+Fairly niche/specialist/obscure software, mostly new territory. \\
+\newpage
 
-\begin{subappendices}
-\subsection{Example sub appendices}
-...
-\end{subappendices}
+\section{Report on the Interim Review Meeting}
+\ \\ \textbf{SOC10101 Honours Project (40 Credits)} \\                   
+\textbf{Week 9 Report} \\ \\
+\textbf{Student Name:} Beej Persson \\
+\textbf{Supervisor:} Kevin Chalmers \\
+\textbf{Second Marker:}  Gregory Leplatre \\
+\textbf{Date of Meeting:}  20/11/2017 \\
+Can the student provide evidence of attending supervision meetings by means of project diary sheets or other equivalent mechanism?  \textbf{no*} \\
+\indent If not, please comment on any reasons presented \\
+\textsl{No evidence provided but no indication from supervisor that there was a problem with weekly meeting attendance.} \\ \\ \\
+Please comment on the progress made so far \\ \\
+\textsl{The work done focused on identifying ways of working with a Hololens, i.e., the output side of the project. This was useful, but the main challenge of the project is object recognition and augmentation, which would have been useful to deal with earlier. This would also have allowed you to engage with relevant literature on the subject.} \\ \\ \\
+Is the progress satisfactory? \textbf{unsure} \\
+Can the student articulate their aims and objectives? \textbf{Partly} \\
+If yes then please comment on them, otherwise write down your suggestions. \\ \\
+\textsl{The overall goal (altering the appearance of real-world objects using AR) is clear. What specific alterations, to which objects and in which context remains to be determined. Familiarity with relevant literature will help you specify your project more accurately. Many things are possible, some more complex than others. For this type of project, a good approach would be to consider what operation would have the highest visual impact while having a manageable development cost. There is definitely potential in your project.} \\ \\ \\	
+Does the student have a plan of work? \textbf{Yes} \\
+If yes then please comment on that plan otherwise write down your suggestions. \\ \\
+\textsl{Unfortunately, the plan is limited to work already done.} \\ \\ \\
+Does the student know how they are going to evaluate their work? \textbf{partly} \\
+If yes then please comment otherwise write down your suggestions. \\ \\
+\textsl{The proposed approach is sensible but it is difficult to be more specific at this stage as the functionalities of the system aren’t clearly defined.} \\ \\
+Any other recommendations as to the future direction of the project \\ \\
+\textsl{With Vuforia, you should be able to capture objects in a scene (in advance) and then track these objects. The acquisition/tracking effectiveness probably depends on the complexity of the object, which you should establish. Once you know the limits of what you will be able to track, you can focus on real-time alterations. Your incremental development approach is suitable, but it needs to be better controlled. Once you know what you are aiming to do, you can define the incremental steps that will lead you there. The core of the research in this area is about achieving realism, which involves lighting and material acquisition. Potentially impactful results can also be achieved by taking slighting different directions. Giving an object a stylised look is one of them. Anecdotally, magic tricks are high impact and can be technically cheap. A magic trick you could implement could be: give a physical object to a user (that you will have previously scanned with Vuforia). Ask them to put it on a table (that you have also previously scanned), and make the object disappear (assuming the user is wearing a Hololens).} \\ \\
+\begin{tabbing}
+	Signatures: \hspace{1em} \= Supervisor \hspace{2em} \= Kevin Chalmers \\
+	\> Second Marker \> Gregory Laplatre \\ \\
+	\> Student \>
+\end{tabbing}
+Please give the student a photocopy of this form immediately after the review meeting; the original should be lodged in the School Office with Leanne Clyde
+\newpage
 
-\section{Second Formal Review Output}
-Insert a copy of the project review form you were given at the end of the review by the second marker
 
 \section{Diary Sheets (or other project management evidence)}
 Insert diary sheets here together with any project management plan you have
