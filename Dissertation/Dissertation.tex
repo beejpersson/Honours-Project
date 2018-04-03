@@ -22,6 +22,7 @@
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage{hyperref} % adds \url command for hyperlinks in text
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage[authoryear]{natbib} % adds APA referencing style to standard LaTeX bibliography support
 \usepackage[toc,page]{appendix}
 % These packages are all incorporated in the memoir class to one degree or another...
 
@@ -37,6 +38,12 @@
 \fancyfoot[C]{\thepage}
 
 %set better section layout
+\makeatletter
+\renewcommand\subsubsection{\@startsection {subsubsection}{1}{2mm} % name, level, indent
+	                           {3pt plus 2pt minus 1pt} % before skip
+	                           {3pt plus 0pt} % after skip
+	                           {\normalfont\bfseries}}
+\makeatother
 \makeatletter
 \renewcommand\subsection{\@startsection {subsection}{1}{2mm} % name, level, indent
                                {3pt plus 2pt minus 1pt} % before skip
@@ -90,13 +97,25 @@ Insert acknowledgements here
 \section{Introduction}
 \subsection{Background}
 This project has three main background components to discuss. These are mixed reality, the Microsoft HoloLens and Vuforia.
+
+Testing.
 \subsubsection{Mixed Reality}
-Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them. \cite{lamport94}
+
+Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them, what they see is entirely virtual. In a mixed reality environment, however, the user is able to see aspects of both the real world and super-imposed virtual objects. MR "supplements reality, rather than completely replacing it" \citep{azuma97}.
+
+MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum", a term coined by \citeauthor{milgram94} in \citeyear{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
+
+The nature of combining real and virtual objects can be utilised in a variety of ways and can enhance a user's ability to perform certain tasks and interact with the world. Whilst initially prevalent in the arts and entertainment industries, MR has a number of practical uses and is being taken advantage of by businesses today, particularly in the fields of military training, manufacturing and education \citep{hughes97}.
+\subsubsection{Microsoft HoloLens}
+Testing.
+
+Testing.
+\subsubsection{Vuforia}
 \subsection{Aims and Objectives}
 
 \subsubsection{Overview Of Project Content and Milestones}
 
-This is a sub sub section with a list of bullet points.
+This is a sub sub section with a list of bullet points. \citep{greenwade93}
 \begin{itemize}\itemsep0pt
 	\item A working X, that will be used for this investigation.
 	\item Investigation of current tools and their potential use during an investigation of X .
@@ -124,16 +143,9 @@ Experience with Linux and managing Virtual machines, networking.
 So on and so forth...
 
 \newpage
-\begin{thebibliography}{9}
+\bibliographystyle{apalike}
+\bibliography{Bibliography}
 
-\bibitem{lamport94}
-  Leslie Lamport,
-  \emph{\LaTeX: A Document Preparation System}.
-  Addison Wesley, Massachusetts,
-  2nd Edition,
-  1994.
-
-\end{thebibliography}
 %example of References. See https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 %might be good to use a separate document for these so your main work is not one really long text file. 
 
