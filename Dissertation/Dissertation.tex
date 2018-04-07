@@ -24,7 +24,7 @@
 \usepackage{array} % for better arrays (eg matrices) in maths
 \usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
-\usepackage{hyperref} % adds \url command for hyperlinks in text, makes them black
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} % adds \url command for hyperlinks in text, makes them black and allows wrapping on url hyphens
 \hypersetup{
 	colorlinks=false,
 	linkcolor=black,
@@ -121,21 +121,86 @@ This project has three main background components to discuss. These are mixed re
 \paragraph{Virtual Continuum}
 Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them, what they see is entirely virtual. In a mixed reality environment, however, the user is able to see aspects of both the real world and super-imposed virtual objects. MR "supplements reality, rather than completely replacing it" \cite{azuma97}.
 
-MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum", a term coined by Milgram and Kishino in 1994  \cite{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\textwidth]{images/virtualitycontinuum}
+	\caption{The Virtuality Continuum}
+	\label{fig_mr}
+\end{figure}
+
+MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum" (see Figure \ref{fig_mr}), a term coined by Milgram and Kishino in 1994  \cite{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
+
 \paragraph{Applications and Devices}
 The nature of combining real and virtual objects can be utilised in a variety of ways and can enhance a user's ability to perform certain tasks and interact with the world. Whilst initially prevalent in the arts and entertainment industries, MR has a number of practical uses and is being taken advantage of by businesses today, particularly in the fields of military training, manufacturing and education \cite{evans17, hughes97}. Many devices utilise these virtual environments, such as the Oculus Rift and the HTC Vive, headsets that need to be connected to a computer or console, both released in 2016, but the Microsoft HoloLens is one of the few standalone devices available that offers mixed reality capabilities in a head-mounted display.
 
 \subsubsection{Microsoft HoloLens}
-
 The Microsoft HoloLens is a mixed reality holographic head-mounted display unit with an adjustable cushioned headband released in 2016 \cite{microsoftcorp}. It is "the first fully untethered holographic computer running Windows 10", enabling a mixed reality experience with no wires, no external cameras and no connection to a PC required \cite{holmdahl15}.
+
 \paragraph{Hardware, Sensors and Features}
-The optics are two separate displays, which are viewed through glass lenses, on to which images are projected and layered to produced what the user can see in their space. The HoloLens' system is essentially mobile hardware featuring an Intel Cherry Trail Atom chip, housing the central processing unit and graphical processing unit, a 64GB SSD and 2GB of RAM and based on x86 architecture \cite{rubino16}. Additionally, however, it runs a few processors that make it unique. There is an inertial measurement unit (IMU), which includes an accelerometer, gyroscope, and magnetometer, and there is an aptly name Holographic Processing Unit (HPU), that handles where the user is looking, gesture tracking, spacial mapping and more. \cite{holmdahl15}.
+\begin{table}[!h]
+	\renewcommand{\arraystretch}{1.3}
+	\caption{Microsoft HoloLens Hardware Specifications}
+	\label{hardware}
+	\centering
+	\begin{tabular}{l|l}
+		\toprule
+		CPU & Intel Atom x5-Z8100 @ 1.04GHz\\ \hline
+		GPU/HPU & HoloLens Processing Unit \\ \hline
+		RAM & 2.0GB\\ \hline
+		Storage & 64GB\\ \hline
+		OS & Windows 10 32-bit\\ \bottomrule
+	\end{tabular}
+\end{table}
+The optics are two separate displays, which are viewed through glass lenses, on to which images are projected and layered to produced what the user can see in their space. The HoloLens' system is essentially mobile hardware (see Table \ref{hardware}) featuring an Intel Cherry Trail Atom chip \cite{rubino16}. Additionally, however, it runs a few processors that make it unique. There is an inertial measurement unit (IMU), which includes an accelerometer, gyroscope, and magnetometer, and there is an aptly named Holographic Processing Unit (HPU), that handles where the user is looking, gesture tracking, spacial mapping and more. \cite{holmdahl15}.
 
-It has four "environment understanding cameras", two on each side, which provide the basis for tracking the user's head; a depth camera, which helps with hand tracking and performs surface reconstruction (for placing holograms on physical objects); a video camera and an ambient light sensor. These sensors work with the optics module and the IMU and is packaged for the Intel Atom chip by the HPU to produce fast response times to movement so that the user's position is updated and displayed in less than 10ms to ensure the holograms feel part of the world. The HoloLens also features four microphones for user commands, mounted stereo speakers providing spatial sound and both WiFi and bluetooth \cite{colaner16}.
+It has four "environment understanding cameras", two on each side, which provide the basis for tracking the user's head; a depth camera, which helps with hand tracking and performs surface reconstruction (for placing holograms on physical objects); a video camera and an ambient light sensor. These sensors work with the optics module and the IMU and is packaged for the Intel Atom chip by the HPU to produce fast response times to movement so that the user's position is updated and displayed in less than 10ms to ensure the holograms feel part of the world. The HoloLens also features four microphones for receiving user commands, mounted stereo speakers providing spatial sound and both WiFi and bluetooth \cite{colaner16}.
+
 \paragraph{Practical Applications}
-As of 2018 there has only been a few practical applications of the Microsoft HoloLens and a number of them have only been proof of concepts so far. Notably there has been a number of applications developed by NASA in partnership with Microsoft. In 2015 they teamed up for the OnSight and Sidekick projects, utilising the HoloLens on the International Space Station for communication and real-time guidance with ground operators, and later again in 2017 to help find the best places on Mars to build bases \cite{nasa15, microsoftnews17}. There are also examples of use in medicine in 2017: a team of surgeons used the HoloLens to visualise MRI and radiography information whilst operating on a patient with a malignant tumour patient \cite{bernardo17, 3ders17}; a ultrasound training simulation was designed to teach healthcare workers proficiency in anatomy through the use of interaction with 3D holograms of internal human structures \cite{lynn17, mahmood17}.
+As of 2018 there has only been a few practical applications of the Microsoft HoloLens and a number of them have only been proof of concepts so far. Notably there has been a number of applications developed by NASA in partnership with Microsoft. In 2015 they teamed up for the OnSight and Sidekick projects, utilising the HoloLens on the International Space Station for communication and real-time guidance with ground operators, and later again in 2017 to help find the best places on Mars to build bases \cite{nasa15, microsoftnews17}.
 
-\subsubsection*{Vuforia}
+There are also a couple of examples of use in medicine. In 2017 a team of surgeons used the HoloLens to visualise MRI and radiography information whilst operating on a patient with a malignant tumour patient \cite{bernardo17, 3ders17}. Also in 2017 an ultrasound training simulation was designed to teach healthcare workers proficiency in anatomy through interaction with 3D holograms of internal human structures \cite{lynn17, mahmood17}.
+
+Microsoft are also working on using the HoloLens as a means of communication as part of a research project called Holoportation \cite{cutler17}. Users will have high quality 3D models of themselves rendered in each other's local space. The goal is to allow them to see, hear and interact with one another as if they were in the same room \cite{orts16}.
+
+There have been even fewer examples of applications that make use of Vuforia's tracking capabilities to build interactive experiences. In 2017 a simple proof of concept assembly instruction application was attempted in Unity that featured user interfaces, dynamic 3D assembly instructions and spatially registered content placement \cite{evans17}.
+
+\subsubsection{Vuforia}
+Vuforia is an augmented reality software development kit designed for Android, iOS and UWP applications with support for phones, tablets and eyewear \cite{vuforia}. The Vuforia engine is natively integrated with the latest versions of Unity and provides the technology to recognise and track images and simple 3D objects in real time. Vuforia has a developer portal that allows for easy access to the SDK and associated tools, such as the Target Manager.
+
+\paragraph{Target Manager}
+The Vuforia Target Manager is a tool that allows the creation and management of target databases via the Vuforia developer portal. The databases can be assigned license keys by developers and enables easy management of the targets needed for separate applications. When creating applications users can choose which databases the SDK will use when attempted to detect targets. The tool can also be used to create new targets by uploading images and 3D models to the database and manipulating them to be in-line with the required format for specific targets \cite{vuforiatargetmanager}. 
+
+\paragraph{Image Targets}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/imagetarget}
+	\caption{An Example Image Target}
+	\label{fig_imagetarget}
+\end{figure}
+
+Image targets are flat images, such as printed media, that the Vuforia SDK can detect and track. They do not require special black and white spaces or codes to be recognised but instead the SDK tracks features that are found in the image itself by comparing those features against its target resource database. Once initially detected the SDK will continue to track the target whilst at least partially in the device camera's field of view and can perform an action or link virtual content to the target, such as the 3D rendered teapot that can be seen in Figure \ref{fig_imagetarget} (image retrieved from Vuforia's image target guide \cite{vuforiaimagetargets}).
+
+\paragraph{Multi-Targets}
+Multi-targets are created by combining multiple image targets and arranging them into a simple 3D geometric shape, such as a cube. All the faces of a multi-target can be tracked simultaneously as they possess a pre-defined position relative to the target's origin. As a result the entire object can be tracked when any one of its images has been detected  \cite{vuforiamultitargets}. These targets are created by defining a relationship between pre-existing image targets using the Vuforia Target Manager.
+
+\paragraph{Object Recognition}
+Object recognition allows the detecting and tracking of more intricate 3D objects by creating object targets made using the Vuforia Object Scanner. The object scanner, which only officially is supported on the latest Samsung Galaxy devices but can be configured to work on other Android devices \cite{vuforiasupportedversions}, is an application that can be used to scan a physical 3D object and produces an Object Data (*.OD) file and allows a visualisation of the object target and its coverage. The *.OD file produced by the application can then be uploaded to produce Vuforia's target manager and an object target to be produced \cite{vuforiaobjectreco}. The SDK will then be able to recognise the real-world object that was scanned by comparing it with the digital representation of the features and geometry that is provided by the object target.
+
+\paragraph{VuMark}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/examplevumarks}
+	\caption{Example VuMarks}
+	\label{fig_vumark}
+\end{figure}
+
+VuMarks are customised markers that encode data and support unique identification and tracking. They are similar to image targets in that they are 2D targets that can be detected and tracked, but provide a lot more than image targets cannot. As the same VuMark design can be used to encode a range of unique IDs or data, they enable the SDK to distinguish between identical looking products using their unique instance ID. VuMarks are designed to enable companies to create AR targets that subtly integrate with their brand, as shown in the example VuMarks in Figure \ref{fig_vumark} (image retrieved from Vuforia's VuMark guide \cite{vuforiavumark}). VuMarks are created using Vuforia's VuMark designer tool and then uploaded to the Vuforia Target Manager.
+
+\paragraph{Model Targets}
+
+
 \subsection{Aims and Objectives}
 
 \subsubsection*{Overview Of Project Content and Milestones}
