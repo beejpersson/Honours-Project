@@ -5,6 +5,7 @@
 
 \documentclass[12pt,a4paper]{article}
 \usepackage{titlesec} %these are how we import packages, one helps set up footers and title layout
+\setcounter{secnumdepth}{4}
 \usepackage{fancyhdr}
 
 % !TEX TS-program = pdflatex
@@ -13,16 +14,25 @@
 
 \usepackage{graphicx} % support the \includegraphics command and options
 
-% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
 %%% PACKAGES
+\usepackage{cite} % for IEEE style number references
+\usepackage{setspace} % for control over line spacing
+\onehalfspacing
 \usepackage{booktabs} % for much better looking tables
 \usepackage{array} % for better arrays (eg matrices) in maths
 \usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
-\usepackage{hyperref} % adds \url command for hyperlinks in text
+\usepackage{hyperref} % adds \url command for hyperlinks in text, makes them black
+\hypersetup{
+	colorlinks=false,
+	linkcolor=black,
+	filecolor=black,      
+	urlcolor=black,
+}
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
-\usepackage[authoryear]{natbib} % adds APA referencing style to standard LaTeX bibliography support
+%\usepackage[authoryear]{natbib} % adds APA referencing style to standard LaTeX bibliography support
 \usepackage[toc,page]{appendix}
 % These packages are all incorporated in the memoir class to one degree or another...
 
@@ -38,14 +48,21 @@
 \fancyfoot[C]{\thepage}
 
 %set better section layout
+
 \makeatletter
-\renewcommand\subsubsection{\@startsection {subsubsection}{1}{2mm} % name, level, indent
+\renewcommand\paragraph{\@startsection {paragraph}{1}{0mm} % name, level, indent
+	                           {3pt plus 2pt minus 1pt} % before skip
+	                           {3pt plus 0pt} % after skip
+	                           {\normalfont}}
+\makeatother
+\makeatletter
+\renewcommand\subsubsection{\@startsection {subsubsection}{1}{0mm} % name, level, indent
 	                           {3pt plus 2pt minus 1pt} % before skip
 	                           {3pt plus 0pt} % after skip
 	                           {\normalfont\bfseries}}
 \makeatother
 \makeatletter
-\renewcommand\subsection{\@startsection {subsection}{1}{2mm} % name, level, indent
+\renewcommand\subsection{\@startsection {subsection}{1}{0mm} % name, level, indent
                                {3pt plus 2pt minus 1pt} % before skip
                                {3pt plus 0pt} % after skip
                                {\normalfont\bfseries}}
@@ -63,6 +80,7 @@
 
 %you can import other documents into your main one, these layout the Title and Declarations on its own page.
 %you might need to change these to \ if your on Microsoft Windows.
+\begin{singlespace}	
 \input{./Dissertation-Title.tex}
 \input{./Dissertation-Dec.tex}
 \pagebreak
@@ -74,7 +92,7 @@
 % fill the abstract in here
 \end{abstract}
 \pagebreak
-
+\setcounter{tocdepth}{2}
 \tableofcontents % is generated for you
 \newpage
 
@@ -91,6 +109,7 @@
 Insert acknowledgements here
 \subsection*{}
 	I would like to thank my widely-desired work ethic, talk-of-the-town dedication and my optimistic opinions of my abilities.
+\end{singlespace}
 \newpage
 
 
@@ -98,24 +117,30 @@ Insert acknowledgements here
 \subsection{Background}
 This project has three main background components to discuss. These are mixed reality, the Microsoft HoloLens and Vuforia.
 
-Testing.
 \subsubsection{Mixed Reality}
+\paragraph{Virtual Continuum}
+Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them, what they see is entirely virtual. In a mixed reality environment, however, the user is able to see aspects of both the real world and super-imposed virtual objects. MR "supplements reality, rather than completely replacing it" \cite{azuma97}.
 
-Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them, what they see is entirely virtual. In a mixed reality environment, however, the user is able to see aspects of both the real world and super-imposed virtual objects. MR "supplements reality, rather than completely replacing it" \citep{azuma97}.
+MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum", a term coined by Milgram and Kishino in 1994  \cite{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
+\paragraph{Applications and Devices}
+The nature of combining real and virtual objects can be utilised in a variety of ways and can enhance a user's ability to perform certain tasks and interact with the world. Whilst initially prevalent in the arts and entertainment industries, MR has a number of practical uses and is being taken advantage of by businesses today, particularly in the fields of military training, manufacturing and education \cite{evans17, hughes97}. Many devices utilise these virtual environments, such as the Oculus Rift and the HTC Vive, headsets that need to be connected to a computer or console, both released in 2016, but the Microsoft HoloLens is one of the few standalone devices available that offers mixed reality capabilities in a head-mounted display.
 
-MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum", a term coined by \citeauthor{milgram94} in \citeyear{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
-
-The nature of combining real and virtual objects can be utilised in a variety of ways and can enhance a user's ability to perform certain tasks and interact with the world. Whilst initially prevalent in the arts and entertainment industries, MR has a number of practical uses and is being taken advantage of by businesses today, particularly in the fields of military training, manufacturing and education \citep{hughes97}.
 \subsubsection{Microsoft HoloLens}
-Testing.
 
-Testing.
-\subsubsection{Vuforia}
+The Microsoft HoloLens is a mixed reality holographic head-mounted display unit with an adjustable cushioned headband released in 2016 \cite{microsoftcorp}. It is "the first fully untethered holographic computer running Windows 10", enabling a mixed reality experience with no wires, no external cameras and no connection to a PC required \cite{holmdahl15}.
+\paragraph{Hardware, Sensors and Features}
+The optics are two separate displays, which are viewed through glass lenses, on to which images are projected and layered to produced what the user can see in their space. The HoloLens' system is essentially mobile hardware featuring an Intel Cherry Trail Atom chip, housing the central processing unit and graphical processing unit, a 64GB SSD and 2GB of RAM and based on x86 architecture \cite{rubino16}. Additionally, however, it runs a few processors that make it unique. There is an inertial measurement unit (IMU), which includes an accelerometer, gyroscope, and magnetometer, and there is an aptly name Holographic Processing Unit (HPU), that handles where the user is looking, gesture tracking, spacial mapping and more. \cite{holmdahl15}.
+
+It has four "environment understanding cameras", two on each side, which provide the basis for tracking the user's head; a depth camera, which helps with hand tracking and performs surface reconstruction (for placing holograms on physical objects); a video camera and an ambient light sensor. These sensors work with the optics module and the IMU and is packaged for the Intel Atom chip by the HPU to produce fast response times to movement so that the user's position is updated and displayed in less than 10ms to ensure the holograms feel part of the world. The HoloLens also features four microphones for user commands, mounted stereo speakers providing spatial sound and both WiFi and bluetooth \cite{colaner16}.
+\paragraph{Practical Applications}
+As of 2018 there has only been a few practical applications of the Microsoft HoloLens and a number of them have only been proof of concepts so far. Notably there has been a number of applications developed by NASA in partnership with Microsoft. In 2015 they teamed up for the OnSight and Sidekick projects, utilising the HoloLens on the International Space Station for communication and real-time guidance with ground operators, and later again in 2017 to help find the best places on Mars to build bases \cite{nasa15, microsoftnews17}. There are also examples of use in medicine in 2017: a team of surgeons used the HoloLens to visualise MRI and radiography information whilst operating on a patient with a malignant tumour patient \cite{bernardo17, 3ders17}; a ultrasound training simulation was designed to teach healthcare workers proficiency in anatomy through the use of interaction with 3D holograms of internal human structures \cite{lynn17, mahmood17}.
+
+\subsubsection*{Vuforia}
 \subsection{Aims and Objectives}
 
-\subsubsection{Overview Of Project Content and Milestones}
+\subsubsection*{Overview Of Project Content and Milestones}
 
-This is a sub sub section with a list of bullet points. \citep{greenwade93}
+This is a sub sub section with a list of bullet points.
 \begin{itemize}\itemsep0pt
 	\item A working X, that will be used for this investigation.
 	\item Investigation of current tools and their potential use during an investigation of X .
@@ -132,19 +157,16 @@ This is a sub sub section with a list of bullet points. \citep{greenwade93}
 And so on for each of the chapters.  The template automatically starts new chapters on a new page.  The associated guidelines tell you what the available styles do and also how to structure a report.
 There is a section break on this page that you should be careful NOT to delete otherwise the references and appendices will be numbered continuously with the rest of the document.
 
+\section{Implementation}
 \section{Evaluation}
 
 \section{Conclusion}
 \subsection{Future Work}
-
-% another example section
-\section{Additional Information / Knowledge Required}
-Experience with Linux and managing Virtual machines, networking.
-So on and so forth...
-
 \newpage
-\bibliographystyle{apalike}
+\begin{singlespace}	
+\bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
+\end{singlespace}
 
 %example of References. See https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 %might be good to use a separate document for these so your main work is not one really long text file. 
