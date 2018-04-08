@@ -46,6 +46,7 @@
 \fancyhead[R]{SOC10101 Honours Project}
 \fancyfoot[L]{}
 \fancyfoot[C]{\thepage}
+\pagenumbering{roman}
 
 %set better section layout
 
@@ -112,97 +113,14 @@ Insert acknowledgements here
 \end{singlespace}
 \newpage
 
-
+\pagenumbering{arabic}
 \section{Introduction}
-\subsection{Background}
-This project has three main background components to discuss. These are mixed reality, the Microsoft HoloLens and Vuforia.
+\subsection{Motivations}
+Mixed reality is an emerging technology that can enhance a user's ability to interact with the world. An application that allows for detection and manipulation of real-world objects is one that can provide new ways to educate students, build virtual structures or even tell immersive stories. The project could benefit technical developers looking for innovative game mechanics or mixed reality enthusiasts seeking an immersive challenge.
 
-\subsubsection{Mixed Reality}
-\paragraph{Virtual Continuum}
-Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them, what they see is entirely virtual. In a mixed reality environment, however, the user is able to see aspects of both the real world and super-imposed virtual objects. MR "supplements reality, rather than completely replacing it" \cite{azuma97}.
+The Microsoft HoloLens is a unique and intriguing piece of hardware. It allows for seamless transition between being in the real-world whilst viewing and interacting with the virtual. The possibilities provided by such an innovative device are compelling and developing for it is one of the primary motivators for carrying out the project.
 
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{images/virtualitycontinuum}
-	\caption{The Virtuality Continuum}
-	\label{fig_mr}
-\end{figure}
-
-MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum" (see Figure \ref{fig_mr}), a term coined by Milgram and Kishino in 1994  \cite{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
-
-\paragraph{Applications and Devices}
-The nature of combining real and virtual objects can be utilised in a variety of ways and can enhance a user's ability to perform certain tasks and interact with the world. Whilst initially prevalent in the arts and entertainment industries, MR has a number of practical uses and is being taken advantage of by businesses today, particularly in the fields of military training, manufacturing and education \cite{evans17, hughes97}. Many devices utilise these virtual environments, such as the Oculus Rift and the HTC Vive, headsets that need to be connected to a computer or console, both released in 2016, but the Microsoft HoloLens is one of the few standalone devices available that offers mixed reality capabilities in a head-mounted display.
-
-\subsubsection{Microsoft HoloLens}
-The Microsoft HoloLens is a mixed reality holographic head-mounted display unit with an adjustable cushioned headband released in 2016 \cite{microsoftcorp}. It is "the first fully untethered holographic computer running Windows 10", enabling a mixed reality experience with no wires, no external cameras and no connection to a PC required \cite{holmdahl15}.
-
-\paragraph{Hardware, Sensors and Features}
-\begin{table}[!h]
-	\renewcommand{\arraystretch}{1.3}
-	\caption{Microsoft HoloLens Hardware Specifications}
-	\label{hardware}
-	\centering
-	\begin{tabular}{l|l}
-		\toprule
-		CPU & Intel Atom x5-Z8100 @ 1.04GHz\\ \hline
-		GPU/HPU & HoloLens Processing Unit \\ \hline
-		RAM & 2.0GB\\ \hline
-		Storage & 64GB\\ \hline
-		OS & Windows 10 32-bit\\ \bottomrule
-	\end{tabular}
-\end{table}
-The optics are two separate displays, which are viewed through glass lenses, on to which images are projected and layered to produced what the user can see in their space. The HoloLens' system is essentially mobile hardware (see Table \ref{hardware}) featuring an Intel Cherry Trail Atom chip \cite{rubino16}. Additionally, however, it runs a few processors that make it unique. There is an inertial measurement unit (IMU), which includes an accelerometer, gyroscope, and magnetometer, and there is an aptly named Holographic Processing Unit (HPU), that handles where the user is looking, gesture tracking, spacial mapping and more. \cite{holmdahl15}.
-
-It has four "environment understanding cameras", two on each side, which provide the basis for tracking the user's head; a depth camera, which helps with hand tracking and performs surface reconstruction (for placing holograms on physical objects); a video camera and an ambient light sensor. These sensors work with the optics module and the IMU and is packaged for the Intel Atom chip by the HPU to produce fast response times to movement so that the user's position is updated and displayed in less than 10ms to ensure the holograms feel part of the world. The HoloLens also features four microphones for receiving user commands, mounted stereo speakers providing spatial sound and both WiFi and bluetooth \cite{colaner16}.
-
-\paragraph{Practical Applications}
-As of 2018 there has only been a few practical applications of the Microsoft HoloLens and a number of them have only been proof of concepts so far. Notably there has been a number of applications developed by NASA in partnership with Microsoft. In 2015 they teamed up for the OnSight and Sidekick projects, utilising the HoloLens on the International Space Station for communication and real-time guidance with ground operators, and later again in 2017 to help find the best places on Mars to build bases \cite{nasa15, microsoftnews17}.
-
-There are also a couple of examples of use in medicine. In 2017 a team of surgeons used the HoloLens to visualise MRI and radiography information whilst operating on a patient with a malignant tumour patient \cite{bernardo17, 3ders17}. Also in 2017 an ultrasound training simulation was designed to teach healthcare workers proficiency in anatomy through interaction with 3D holograms of internal human structures \cite{lynn17, mahmood17}.
-
-Microsoft are also working on using the HoloLens as a means of communication as part of a research project called Holoportation \cite{cutler17}. Users will have high quality 3D models of themselves rendered in each other's local space. The goal is to allow them to see, hear and interact with one another as if they were in the same room \cite{orts16}.
-
-There have been even fewer examples of applications that make use of Vuforia's tracking capabilities to build interactive experiences. In 2017 a simple proof of concept assembly instruction application was attempted in Unity that featured user interfaces, dynamic 3D assembly instructions and spatially registered content placement \cite{evans17}.
-
-\subsubsection{Vuforia}
-Vuforia is an augmented reality software development kit designed for Android, iOS and Universal Windows Platform applications with support for phones, tablets and eyewear \cite{vuforia, vuforiaeyewear}. The Vuforia engine is natively integrated with the latest versions of Unity and provides the technology to recognise and track images and simple 3D objects in real time. Vuforia has a developer portal that allows for easy access to the SDK and associated tools, such as the Target Manager.
-
-\paragraph{Target Manager}
-The Vuforia Target Manager is a tool that allows the creation and management of target databases via the Vuforia developer portal. The databases can be assigned license keys by developers and enables easy management of the targets needed for separate applications. When creating applications users can choose which databases the SDK will use when attempted to detect targets. The tool can also be used to create new targets by uploading images and 3D models to the database and manipulating them to be in-line with the required format for specific targets \cite{vuforiatargetmanager}. 
-
-\paragraph{Image Targets}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/imagetarget}
-	\caption{An Example Image Target}
-	\label{fig_imagetarget}
-\end{figure}
-
-Image targets are flat images, such as printed media, that the Vuforia SDK can detect and track. They do not require special black and white spaces or codes to be recognised but instead the SDK tracks features that are found in the image itself by comparing those features against its target resource database. Once initially detected the SDK will continue to track the target whilst at least partially in the device camera's field of view and can perform an action or link virtual content to the target, such as the 3D rendered teapot that can be seen in Figure \ref{fig_imagetarget} (image retrieved from Vuforia's image target guide \cite{vuforiaimagetargets}).
-
-\paragraph{Multi-Targets}
-Multi-targets are created by combining multiple image targets and arranging them into a simple 3D geometric shape, such as a cube. All the faces of a multi-target can be tracked simultaneously as they possess a pre-defined position relative to the target's origin. As a result the entire object can be tracked when any one of its images has been detected  \cite{vuforiamultitargets}. These targets are created by defining a relationship between pre-existing image targets using the Vuforia Target Manager.
-
-\paragraph{Object Recognition}
-Object recognition allows the detecting and tracking of more intricate 3D objects by creating object targets made using the Vuforia Object Scanner. The object scanner, which only officially is supported on the latest Samsung Galaxy devices but can be configured to work on other Android devices \cite{vuforiasupportedversions}, is an application that can be used to scan a physical 3D object and produces an Object Data (*.OD) file and allows a visualisation of the object target and its coverage. The *.OD file produced by the application can then be uploaded to produce Vuforia's target manager and an object target to be produced \cite{vuforiaobjectreco}. The SDK will then be able to recognise the real-world object that was scanned by comparing it with the digital representation of the features and geometry that is provided by the object target.
-
-\paragraph{VuMark}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/examplevumarks}
-	\caption{Example VuMarks}
-	\label{fig_vumark}
-\end{figure}
-
-VuMarks are customised markers that encode data and support unique identification and tracking. They are similar to image targets in that they are 2D targets that can be detected and tracked, but provide a lot more than image targets cannot. As the same VuMark design can be used to encode a range of unique IDs or data, they enable the SDK to distinguish between identical looking products using their unique instance ID. VuMarks are designed to enable companies to create AR targets that subtly integrate with their brand, as shown in the example VuMarks in Figure \ref{fig_vumark} (image retrieved from Vuforia's VuMark guide \cite{vuforiavumark}). VuMarks are created using Vuforia's VuMark designer tool and then uploaded to the Vuforia Target Manager.
-
-\paragraph{Model Targets}
-Model targets enable physical objects to be detected and tracked using a 3D model of the object. The real-world objects are recognised by the Vuforia SDK using a "specially prepared target database that is generated by processing a digital 3D representation of the object" using the Model Target Generator tool. Supported objects must be rigid and have matte surfaces. For this to work, the 3D representation of the object should be accurate to a high degree of precision to the physical object. Vuforia's model target test application features a model that is to be 3D printed to be recognised by the SDK \cite{vuforiamodeltargets}.
-
-\subsubsection{Summary of Findings}
-Attempting to capture and manipulate real-world objects on the Microsoft HoloLens is mostly unexplored territory. The HoloLens provides spatial recognition hardware and sensors that allow for head and hand tracking but no built-in object recognition. Vuforia provides the tools to recognise real world objects through the use of a variety of targets stored in the online target databases. The SDK is integrated into Unity and supports development of Universal Windows Applications, as well as specifically stating support of the Microsoft HoloLens. 
+The idea of capturing physical objects in the real-world and then manipulating them in interesting ways in real-time is relatively unexplored. The concept of such an application is enough to warrant further exploration of these technologies and it is this concept from which the project's goals derive.
 
 \subsection{Aims and Objectives}
 The aim of this project is to evaluate the effectiveness of real-world object capture and real-time object manipulation in a mixed reality environment using Vuforia on the Microsoft HoloLens. The goal will be to develop a method to recognise and track a simple 3D object in space using Vuforia's SDK. If a simple object is successfully detected and tracked then the scope of the project can extend to attempts at manipulation of the object and the capture of multiple and/or more complex objects. The manipulation attempts will include over-laying post-processing effects by applying shaders to the captured object to, for example, make it appear in greyscale or blurred. Further testing can be done to explore to what extent these manipulations can be performed in real-time given the limiting hardware of the HoloLens.
@@ -233,38 +151,200 @@ The main deliverables of the project are listed below:
 	\item Poster summarising the key features of the project
 \end{itemize}
 
-\paragraph{Importance of the Project}
-Mixed reality is an emerging technology that can enhance a user's ability to interact with the world. An application that allows for detection and manipulation of real-world objects is one that can provide new ways to educate students, build virtual structures or even tell immersive stories. The project could benefit technical developers looking for innovative game mechanics or mixed reality enthusiasts seeking an immersive challenge.
+\subsubsection{Constraints}
+Vuforia's support of the Microsoft HoloLens is relatively unexplored. Certain features Vuforia offers may not all work with the HoloLens' specific hardware. Due to the nature of the relative niche that Vuforia's SDK seeks to fill, when troubleshooting and reading through Vuforia's forums the desired answers are sparse. This is true for working with Vuforia using more common hardware, but is especially so when working primarily with the HoloLens.
 
-\subsubsection{Limitations}
-Vuforia's support of the Microsoft HoloLens is relatively unexplored. Certain features Vuforia offers may not all work with the HoloLens' specific hardware. Due to the nature of the relative niche that Vuforia's SDK seeks to fill, online forums and troubleshooting answers are scarce, especially when working primarily with the HoloLens.
+One of Vuforia's targets require models to be 3D printed. A 3D printer was not able to be acquired for the project and as a result during development model target detection was not explored.
+
+Deploying applications to the HoloLens could be done either over WiFi or via a USB connection. Each time the application was deployed it took more than five minutes for the application to execute. This made trying to fix minor bugs frustrating as, for example, after waiting five minutes sometimes the application may simply not run due a small typographical error. Microsoft provide a HoloLens Emulator that could have enabled faster deployment and debugging times but it required a version of Windows 10 that this project did not have access to during development.
 
 \subsection{Structure of this Dissertation}
-This dissertation is split into five primary chapters.
+This dissertation is split into three primary sections.
 
-The first chapter seeks to provide a background to the technologies utilised by the project as well as an overview of the project's aims and scope. The second chapter details the methodology followed and how that affected the outcome of the project. The third chapter is a look at the specifics of what is provided in the application's implementation. The fourth chapter is an evaluation of the application, its relation to the initial goals and a discussion of whether the project was successful. The final chapter provides a conclusion to the dissertation that summarises the findings of the project as well as any future work this project can stand to benefit from. This section also includes a reflection on me, the author, and my feelings about the project.
+The first section seeks to provide a background to the technologies utilised by the project. The second section details the methodology followed and documents the resulting implementation. The final section is an evaluation of the application and a conclusion to the dissertation and project as a whole.
+
+Section one (Chapter 2) addresses the background information associated with the project. It looks at the three primary concepts and technologies utilised: mixed reality, the Microsoft HoloLens and the Vuforia.
+
+Section two (Chapters 3 and 4) details the approach taken to the project and tools that were used. It includes a look at the specifics of the work undertaken, any problems that were encountered and how that affected the development of the deliverables.
+
+Section three (Chapters 5 and 6) provides an evaluation of the implementation, its relation to the initial goals and a discussion of whether the results were successful. It also provides a conclusion that summarises the findings of the project and highlights future work this project stands to benefit from. This section also includes a reflection on me, the author, and my feelings about the project.
+
+\newpage
+\section{Background}
+This chapter is a look at the context of the project. It aims to provide an overview of the key technologies that appear throughout and a frame of reference for the project's direction thereafter. There are three main background components to discuss. These are mixed reality, the Microsoft HoloLens and Vuforia.
+
+\subsection{Mixed Reality}
+\subsubsection{Virtual Continuum}
+Mixed reality (MR) is a variation of virtual environments, or virtual reality. A virtual environment is one in which a user is immersed inside a synthetic environment. Whilst in this environment the user cannot see the real world around them, what they see is entirely virtual. In a mixed reality environment, however, the user is able to see aspects of both the real world and super-imposed virtual objects. MR "supplements reality, rather than completely replacing it" \cite{azuma97}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\textwidth]{images/virtualitycontinuum}
+	\caption{The Virtuality Continuum}
+	\label{fig_mr}
+\end{figure}
+
+MR is often considered as encompassing both augmented reality (AR) and augmented virtuality (AV), both of which reside along the "virtuality continuum" (see Figure \ref{fig_mr}), a term coined by Milgram and Kishino in 1994  \cite{milgram94}, with the real world at one end and the virtual at the other. AR refers to an otherwise real world environment in which there can be seen virtual augmentations, often viewed through a clear screen. AV, conversely, attempts to merge real world scenery or objects into an otherwise virtual world.
+
+\subsubsection{Applications and Devices}
+The nature of combining real and virtual objects can be utilised in a variety of ways and can enhance a user's ability to perform certain tasks and interact with the world. Whilst initially prevalent in the arts and entertainment industries, MR has a number of practical uses and is being taken advantage of by businesses today, particularly in the fields of military training, manufacturing and education \cite{evans17, hughes97}. Many devices utilise these virtual environments, such as the Oculus Rift and the HTC Vive, headsets that need to be connected to a computer or console, both released in 2016, but the Microsoft HoloLens is one of the few standalone devices available that offers mixed reality capabilities in a head-mounted display.
+
+\subsection{Microsoft HoloLens}
+The Microsoft HoloLens is a mixed reality holographic head-mounted display unit with an adjustable cushioned headband released in 2016 \cite{microsoftcorp}. It is "the first fully untethered holographic computer running Windows 10", enabling a mixed reality experience with no wires, no external cameras and no connection to a PC required \cite{holmdahl15}.
+
+\subsubsection{Hardware, Sensors and Features}
+\begin{table}[!h]
+	\renewcommand{\arraystretch}{1.3}
+	\caption{Microsoft HoloLens Hardware Specifications}
+	\label{hardware}
+	\centering
+	\begin{tabular}{l|l}
+		\toprule
+		CPU & Intel Atom x5-Z8100 @ 1.04GHz\\ \hline
+		GPU/HPU & HoloLens Processing Unit \\ \hline
+		RAM & 2.0GB\\ \hline
+		Storage & 64GB\\ \hline
+		OS & Windows 10 32-bit\\ \bottomrule
+	\end{tabular}
+\end{table}
+The optics are two separate displays, which are viewed through glass lenses, on to which images are projected and layered to produced what the user can see in their space. The HoloLens' system is essentially mobile hardware (see Table \ref{hardware}) featuring an Intel Cherry Trail Atom chip \cite{rubino16}. Additionally, however, it runs a few processors that make it unique. There is an inertial measurement unit (IMU), which includes an accelerometer, gyroscope, and magnetometer, and there is an aptly named Holographic Processing Unit (HPU), that handles where the user is looking, gesture tracking, spacial mapping and more. \cite{holmdahl15}.
+
+It has four "environment understanding cameras", two on each side, which provide the basis for tracking the user's head; a depth camera, which helps with hand tracking and performs surface reconstruction (for placing holograms on physical objects); a video camera and an ambient light sensor. These sensors work with the optics module and the IMU and is packaged for the Intel Atom chip by the HPU to produce fast response times to movement so that the user's position is updated and displayed in less than 10ms to ensure the holograms feel part of the world. The HoloLens also features four microphones for receiving user commands, mounted stereo speakers providing spatial sound and both WiFi and bluetooth \cite{colaner16}.
+
+\subsubsection{Practical Applications}
+As of 2018 there has only been a few practical applications of the Microsoft HoloLens and a number of them have only been proof of concepts so far. Notably there has been a number of applications developed by NASA in partnership with Microsoft. In 2015 they teamed up for the OnSight and Sidekick projects, utilising the HoloLens on the International Space Station for communication and real-time guidance with ground operators, and later again in 2017 to help find the best places on Mars to build bases \cite{nasa15, microsoftnews17}.
+
+There are also a couple of examples of use in medicine. In 2017 a team of surgeons used the HoloLens to visualise MRI and radiography information whilst operating on a patient with a malignant tumour patient \cite{bernardo17, 3ders17}. Also in 2017 an ultrasound training simulation was designed to teach healthcare workers proficiency in anatomy through interaction with 3D holograms of internal human structures \cite{lynn17, mahmood17}.
+
+Microsoft are also working on using the HoloLens as a means of communication as part of a research project called Holoportation \cite{cutler17}. Users will have high quality 3D models of themselves rendered in each other's local space. The goal is to allow them to see, hear and interact with one another as if they were in the same room \cite{orts16}.
+
+\subsection{Vuforia}
+Vuforia is an augmented reality software development kit designed for Android, iOS and Universal Windows Platform applications with support for phones, tablets and eyewear \cite{vuforia, vuforiaeyewear}. The Vuforia engine is natively integrated with the latest versions of Unity and provides the technology to recognise and track images and simple 3D objects in real time. Vuforia provides a developer portal with access to the Vuforia Target Manager that allows the creating and storing of multiple targets to be used by Vuforia applications \cite{vuforiatargetmanager}.
+
+\subsubsection{Target Types}
+Vuforia supports a variety of 2D and 3D targets that it stores in a databases that it can reference when needing to detect and track objects. These features are listed below:
+
+\begin{table}[!h]
+	\renewcommand{\arraystretch}{1.3}
+	\caption{Vuforia SDK Features}
+	\label{hardware}
+	\centering
+	\begin{tabular}{c|c|c}
+		\toprule
+		Images & Objects & Environments \\ \midrule
+		Image Targets & Object Recognition & Extended Tracking \\
+		Multi-Targets & VuMark & Ground Plane \\
+		Cylinder Targets & Model Targets &  \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\subsubsection{Related Projects}
+There have been a few examples of applications that make use of Vuforia's tracking capabilities to build interactive experiences. These applications tend to be built for mobile devices. In 2014 a mobile advertising application was designed to take advantage of Vuforia's markerless image detection to detect image targets that possessed information relevant to the user \cite{kim14}.
+
+There are far fewer applications that use Vuforia on the HoloLens. In 2017 a simple proof of concept assembly instruction application was attempted in Unity that featured user interfaces, dynamic 3D assembly instructions and spatially registered content placement \cite{evans17}.
+
+\subsubsection{Summary of Findings}
+Attempting to capture and manipulate real-world objects on the Microsoft HoloLens is mostly unexplored territory. The HoloLens provides spatial recognition hardware and sensors that allow for head and hand tracking but no built-in object recognition. Vuforia provides the tools to recognise real world objects through the use of a variety of targets stored in the online target databases. The SDK is integrated into Unity and supports development of Universal Windows Applications, as well as specifically stating support of the Microsoft HoloLens. 
 
 \newpage
 \section{Methodology}
-\subsection{Getting to grips with Vuforia}
-\subsubsection{Vuforia's Samples}
+This chapter details the approach taken and the tools that were required during the development the deliverables. It will detail the work that was undertaken and the problems that arose as a result. The problems encountered ultimately defined the outcome of the deliverables and the way in which they affected the project are detailed in this chapter.
+
+\subsection{Approach}
+There were three principal stages to the development process. The first stage was the project set-up. The second stage details the initial attempts at object capture using Vuforia's object targets. The final stage was a readjustment of the attempts and an adaptation to the previous lack of success by changing the environment in which the detection was desired.
+
+\subsubsection{Stage One: Set-Up}
+The first stage was the set-up. This stage included acquiring and getting to grips with the tools and technologies that were to be used. The Microsoft HoloLens was acquired, the required software downloaded and sample projects installed and explored. This stage was important to gain confidence in HoloLens usage and development and allow a more fluid transition to the second stage.
+
+\subsubsection{Stage Two: Initial Attempt at Object Capture}
+In the second stage the initial attempt to detect real-world objects using Vuforia on the HoloLens was carried out. Vuforia's object targets were chosen as the best targets to use to attempt this given the research done earlier. The additional software required (Vuforia's Object Scanner APK) was installed and an object was scanned in and made a target in Vuforia's Target Manager. A application was built using Unity and multiple attempts were made to detect the object, but all were ultimately unsuccessful. This led to the final stage.
+ 
+\subsubsection{Stage Three: Further Attempts at Object Capture}
+In the final stage of development an adaptation was made and Vuforia's multi-targets were explored instead. Images were captured of the multiple sides of an cuboid object and a target was created using Vuforia's Target Manager. Another application was built in Unity and more attempts were made to detect the object, but again there was no success. This led to the decision to try to change the environment in which the attempted detection was being made. The project was moved from a bright area with wide window that provide directional light to a dimmer area with a diffuse overhead light in the hopes that this would enable detection. Both applications were tested and adjustments made but objection detection still didn't occur.
+
+\subsection{Technologies}
+The tools that the project required included hardware and software. This included the Microsoft HoloLens, Unity, Visual Studio, Vuforia and its associated tools. The technologies required are detailed below:
+
+\subsubsection{Microsoft HoloLens}
+The project was to be developed for the Microsoft HoloLens. The HoloLens was chosen due to its immersive experience when worn, its mixed reality capabilities and its Windows operating system that aligned with Vuforia's support of Universal Windows Platform applications. Microsoft also provide HoloLens Emulator software, however this required an a particular version of Windows 10 that the project did not have access to. The University provided the HoloLens for the duration of the project.
+
+\subsubsection{Unity}
+Unity is a multi-platform engine with a comprehensive user interface in which immersive applications can be built and features a wide variety of developer tools for 3D virtual environments \cite{unity}. As of Unity 2017.2, Vuforia Engine is delivered as a built-in tool with the majority of the required functionality coming as standard. Unity was used to build the applications that were ran on HoloLens and were primarily composed of Unity's scenes, game objects and cameras.
+
+\paragraph{Scenes}
+Scenes provide the environments that the application will run in. It contains the camera for the user view-point, lighting and any game objects required \cite{unityscenes}. Each scene in the applications built during this project were used to house the targets required by Vuforia and the objects to be rendered on those targets as an indication of target detection.
+
+\paragraph{Game Objects}
+Game objects are Unity named entities that represent every object used in the scene, including the camera, lighting and the Vuforia targets \cite{unityobjects}. In the applications built these were primarily the camera, any Vuforia targets that were required in the scene, lighting and canvases used for user interfaces.
+
+\paragraph{Camera}
+Unity's camera is a required game object that provides the user their field of view and lets them see the environment \cite{unitycamera}. The camera used in this project is a special one provided by the Vuforia SDK that supports augmented reality by removing the background skybox and adjusting the clipping planes to better suit digital eyewear.
+
+\subsubsection{Visual Studio}
+Visual Studio is an integrated development environment made by Microsoft. It provides a user interface in which software can be designed, debugged, tested and developed \cite{vs}. For this project Visual Studio will be used to deploy the Unity applications to the Microsoft HoloLens. Applications can be deployed from the development machine to the device over WiFi or via a USB connection. Visual Studio also allows debugging to occur whilst the application is running on the HoloLens.
+
+\subsubsection{Vuforia}
+The Vuforia SDK provides the tools to detect and track real world objects through the use of targets. It has a developer portal that allows for easy access to the SDK and associated tools. The tools utilised for the project were Vuforia's Target Manager, Object Scanner and a variety of their pre-defined targets detailed below:
+
+\paragraph{Target Manager}
+The Vuforia Target Manager is a tool that allows the creation and management of target databases via the Vuforia developer portal. The databases can be assigned license keys by developers and enables easy management of the targets needed for separate applications. When creating applications users can choose which databases the SDK will use when attempted to detect targets. The tool can also be used to create new targets by uploading images and 3D models to the database and manipulating them to be in-line with the required format for specific targets \cite{vuforiatargetmanager}. 
+
+\paragraph{Image Targets}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/imagetarget}
+	\caption{An Example Image Target}
+	\label{fig_imagetarget}
+\end{figure}
+
+Image targets are flat images, such as printed media, that the Vuforia SDK can detect and track. They do not require special black and white spaces or codes to be recognised but instead the SDK tracks features that are found in the image itself by comparing those features against its target resource database. Once initially detected the SDK will continue to track the target whilst at least partially in the device camera's field of view and can perform an action or link virtual content to the target, such as the 3D rendered teapot that can be seen in Figure \ref{fig_imagetarget} (image retrieved from Vuforia's image target guide \cite{vuforiaimagetargets}).
+
+\paragraph{Multi-Targets}
+Multi-targets are created by combining multiple image targets and arranging them into a simple 3D geometric shape, such as a cube. All the faces of a multi-target can be tracked simultaneously as they possess a pre-defined position relative to the target's origin. As a result the entire object can be tracked when any one of its images has been detected  \cite{vuforiamultitargets}. These targets are created by defining a relationship between pre-existing image targets using the Vuforia Target Manager.
+
+\paragraph{Object Recognition and the Vuforia Object Scanner}
+Object recognition allows the detecting and tracking of more intricate 3D objects by creating object targets made using the Vuforia Object Scanner. The object scanner, which only officially is supported on the latest Samsung Galaxy devices but can be configured to work on other Android devices \cite{vuforiasupportedversions}, is an application that can be used to scan a physical 3D object and produces an Object Data (*.OD) file and allows a visualisation of the object target and its coverage. The *.OD file produced by the application can then be uploaded to produce Vuforia's target manager and an object target to be produced \cite{vuforiaobjectreco}. The SDK will then be able to recognise the real-world object that was scanned by comparing it with the digital representation of the features and geometry that is provided by the object target.
+
+\paragraph{VuMark}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/examplevumarks}
+	\caption{Example VuMarks}
+	\label{fig_vumark}
+\end{figure}
+
+VuMarks are customised markers that encode data and support unique identification and tracking. They are similar to image targets in that they are 2D targets that can be detected and tracked, but provide a lot more than image targets cannot. As the same VuMark design can be used to encode a range of unique IDs or data, they enable the SDK to distinguish between identical looking products using their unique instance ID. VuMarks are designed to enable companies to create AR targets that subtly integrate with their brand, as shown in the example VuMarks in Figure \ref{fig_vumark} (image retrieved from Vuforia's VuMark guide \cite{vuforiavumark}).
+
+\paragraph{Model Targets}
+Model targets enable physical objects to be detected and tracked using a 3D model of the object. The real-world objects are recognised by the Vuforia SDK using a "specially prepared target database that is generated by processing a digital 3D representation of the object" using the Model Target Generator tool. Supported objects must be rigid and have matte surfaces. For this to work, the 3D representation of the object should be accurate to a high degree of precision to the physical object. Vuforia's model target test application features a model that is to be 3D printed to be recognised by the SDK \cite{vuforiamodeltargets}.
+
+\subsection{Project Set-Up}
+The first stage of work to be undertaken for the project was to get to acquire the hardware, install the software and begin to get to grips with Microsoft HoloLens development.
+\subsubsection{Microsoft HoloLens}
+The Microsoft HoloLens was provided by the University for the duration of the project. Initially it required setting-up the device for development, which included creating a Microsoft account, enabling developer mode on the device and ensuring the correct Visual Studio settings were used on the deployment device. It was during this stage that the features and capabilities of the Microsoft HoloLens were explored as part of an attempt to become more familiar with the hardware.
+\subsubsection{Vuforia SDK}
+\paragraph{Vuforia's Samples}
 \subsection{Object Recognition}
-\subsubsection{Choice Over Model Targets}
+\subsubsection{Choice Over Other 3D Targets}
 \subsubsection{Vuforia Object Scanner}
 \subsection{Multi-Target}
-\subsubsection {Changing Environment}
-\subsection{Image Target}
+\subsubsection{Changing Environment}
 
-\section{Implementation}
-\subsection{Object Recognition}
-\subsection{Multi-Target}
+\subsection{Implementation}
+\subsubsection{Object Recognition}
+\subsubsection{Multi-Target}
 
+\newpage
 \section{Evaluation}
 
+\newpage
 \section{Conclusion}
 \subsection{Has the Project met its Aims?}
 \subsection{Future Work}
 \subsection{Personal Reflection}
+
 \newpage
 \begin{singlespace}	
 \bibliographystyle{IEEEtran}
