@@ -249,7 +249,7 @@ Attempting to capture and manipulate real-world objects on the Microsoft HoloLen
 
 \newpage
 \section{Methodology}
-This chapter details the approach taken and the tools that were required during the development the deliverables. It will detail the work that was undertaken and the problems that arose as a result. The problems encountered ultimately defined the outcome of the deliverables and the way in which they affected the project are detailed in this chapter.
+This chapter details the approach taken and the tools that were required during the development of the deliverables. It will detail the work that was undertaken and the problems that arose as a result. The problems encountered ultimately defined the outcome of the deliverables and the way in which they affected the project are detailed in this chapter.
 
 \subsection{Approach}
 There were three principal stages to the development process. The first stage was the project set-up. The second stage details the initial attempts at implementations of object capture using Vuforia's object targets. The final stage was an adaptation to the previous lack of success by changing the implementation to use another target type and later changing the environment in which the detection was desired.
@@ -261,7 +261,7 @@ The first stage was the set-up. This stage included acquiring and getting to gri
 In the second stage the initial attempt to detect real-world objects using Vuforia on the HoloLens was carried out. Vuforia's Object Recognition was chosen as the best targets to use to attempt this given the research done earlier. The additional software required (Vuforia's Object Scanner APK) was installed and an object was scanned in and made a target in Vuforia Target Manager. An application was built using Unity and multiple attempts were made to detect the object, but all were ultimately unsuccessful. This led to the final stage. 
  
 \subsubsection{Stage Three: Multi-Targets}
-In the final stage of development an adaptation was made and Vuforia's Multi-Targets were explored instead. Images were taken of the multiple sides of a cuboid object and a target was created using Vuforia Target Manager. Another application was built in Unity and more attempts were made to detect the object, but again there was no success. This led to the decision to try to change the environment in which the attempted detection was being made. The project was moved from a bright area with wide window that provided directional light to a dimmer area with a diffuse overhead light in the hopes that this would enable detection. Both applications were tested and adjustments made but object detection on the HoloLens still didn't occur.
+In the final stage of development an adaptation was made and Vuforia's Multi-Targets were explored instead. Images were taken of the multiple sides of a cuboid object and a target was created using Vuforia Target Manager. Another application was built in Unity and more attempts were made to detect the object, but again there was no success. This led to the decision to try to change the environment in which the attempted detection was being made. The project was moved from a bright area with wide windows that provided directional light to a dimmer area with a diffuse overhead light in the hopes that this would enable detection. Both applications were tested and adjustments made but object detection on the HoloLens still didn't occur.
 
 \subsection{Technologies}
 The tools that the project required included hardware and software. This included the Microsoft HoloLens, Unity, Visual Studio, Vuforia and its associated tools. The technologies required are detailed below:
@@ -338,7 +338,7 @@ Vuforia provide a comprehensive asset package that can be imported into Unity\fo
 
 Vuforia also provide sample applications for digital eyewear that provide some basic scenes containing example targets\footnote{\url{https://developer.vuforia.com/downloads/samples}}. Much of the steps taken to get these samples running was determined by combining information detailed in the guides provided by Microsoft, Unity and Vuforia. However troubleshooting Vuforia's forums was required as often the guides lacked necessary information. 
 
-The process involved acquiring and applying a Vuforia \textit{Eyewear App License Key} to the Unity project, defining the desired Target Database, fixing the provided camera so that it did not have a skybox and changing the clipping panes to the recommended values for the HoloLens. There were also numerous settings that needed to be changed or enabled in Unity. These included, but are not limited to, enabling virtual reality support in the \textit{XRSettings} in \textit{PlayerSettings}, setting the device type to \textit{Digital Eyewear}, loading the HoloLens Device Config, setting the platform build configurations and enabling extended tracking on each target game object in the advanced section of their behaviour script. After everything had been correctly configured, and after a not-insubstantial amount of minor changes, the sample could successfully be deployed to the HoloLens.
+The process involved acquiring and applying a Vuforia \textit{Eyewear App License Key} to the Unity project, defining the desired Target Database, fixing the provided camera so that it did not have a skybox and changing the clipping panes to the recommended values for the HoloLens. There were also numerous settings that needed to be changed or enabled in Unity. These included, but are not limited to, enabling virtual reality support in the \textit{XRSettings} in \textit{PlayerSettings}, setting the device type to \textit{Digital Eyewear}, loading the HoloLens Device Config, setting the platform build configurations and enabling extended tracking on each target game object in the advanced section of their behaviour script.  After everything had been correctly configured, and after a not-insubstantial amount of minor changes, the sample could on occasion be successfully deployed to the HoloLens. Even until the very end of development there were certain errors that could appear at different stages that had no discernible pattern or reasoning to their appearance. Troubleshooting only revealed workarounds, such as rebuilding the Visual Studio solution, restarting Unity and, for one particularly inexplicable bug, starting again with a new Unity project and reinstalling the asset packages. This was to be the norm for all subsequent stages of development.
 
 \subsection{Implementation}
 \subsubsection{Object Recognition}
@@ -361,56 +361,105 @@ Vuforia Object Scanner is provided as an Android Package (APK) and was installed
 \end{figure}
 
 
-\paragraph{Scanning} %add phone screenies
-As seen in Figure \ref{fig_pomo}, the first object chosen to be scanned in was a Pomodoro timer. The origin is the lower left hand corner of the Object Scanning Target's grid region and corresponds to the local (0,0,0) coordinates of the Object Target instance's bounding box. The Pomodoro timer was placed on the grid ensuring none of the outer edges of the object crossed the grid's axes. The object scanner APK uses the Android device's camera to scan the object and starts when the record button is pressed. The device was moved slowly around the object whilst recording, keeping it within view. The APK overlays a simple indication of the object's geometry that is made up of multiple faces that turn green when the corresponding sections have successfully been scanned in. Once the majority of the relevant surface areas were green the recording was stopped and the scanning session was named and the resulting Object Data (*.OD) was saved. The APK provides the capability to test the results of the scan by rendering a green cuboid augmentation at the target's origin when the object is detected. The target was tested in this way against a variety of backgrounds and was successfully recognised as shown in figure. 
-%add phone screenshots
+\paragraph{Scanning}
+As seen in Figure \ref{fig_pomo}, the first object chosen to be scanned in was a Pomodoro timer. The origin is the lower left hand corner of the Object Scanning Target's grid region and corresponds to the local (0,0,0) coordinates of the Object Target instance's bounding box. The Pomodoro timer was placed on the grid ensuring none of the outer edges of the object crossed the grid's axes. The object scanner APK uses the Android device's camera to scan the object and starts when the record button is pressed. The device was moved slowly around the object whilst recording, keeping it within view. The APK overlays a simple indication of the object's geometry that is made up of multiple faces that turn green when the corresponding sections have successfully been scanned in. Once the majority of the relevant surface areas were green the recording was stopped and the scanning session was named and the resulting Object Data (*.OD) was saved. The APK provides the capability to test the results of the scan by rendering a green cuboid augmentation at the target's origin when the object is detected. The target was tested in this way against a variety of backgrounds and was successfully recognised as shown in Figure \ref{fig_detection}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=8cm,keepaspectratio]{images/detection}
+	\caption[Detection in APK Test]{Object Detection in the APK Testing Feature}
+	\label{fig_detection}
+\end{figure}
+
 The object data was then sent back to the development machine as an *.OD file. This file was then uploaded to a new target database created for the project using Vuforia Target Manager.
-%ADD PHONE SCREENSHOTS
+
 \paragraph{Application}
 The Unity project was updated to direct Vuforia to the newly created target database and a new scene was built that contained the ARCamera and the new Object Target. The 3D Mars habitat render was left as the object that would be overlaid and would be used to determine if the Pomodoro timer was successfully detected. The build settings were configured for UWP, the target device set to the Microsoft HoloLens and the debugging option was enabled. The application was exported from Unity into Visual Studio and then built, run and deployed to the HoloLens from there. Despite multiple attempts at reconfiguring the project it was clear the Pomodoro timer could not be detected.
 
 \paragraph{Troubleshooting}
-After all the usual guides provided by Microsoft, Unity and Vuforia and their listed solutions to common problems had been exhausted, online forums were turned to in the hope of finding the answers. Quickly it became clear the consensus of other developers was that using Vuforia's Object Recognition tool was very inconsistent when deployed to the Microsoft HoloLens, even the one provided in the sample\footnote{\url{https://developer.vuforia.com/forum/hololens/object-recognition-sample-doesnt-work-hololens}}\textsuperscript{,}\footnote{\url{https://developer.vuforia.com/forum/hololens/improve-object-tracking}}. A Vuforia Support reply on one post suggested that the user wait for the then unreleased Model Target tool\footnote{\url{https://developer.vuforia.com/forum/hololens/object-recognition-unsatisfactory-hololens}}. As so many minor things can affect the success of this object detection method, such as the surrounding environment during the object scanning phase, the material of the object itself, the lighting in the desired detection environment and any one of a number of specific settings in the Unity editor, it was at this point decided that another type of Vuforia target should be attempted.
+After all the usual guides provided by Microsoft, Unity and Vuforia and their listed solutions to common problems had been exhausted, online forums were turned to in the hope of finding the answers. Quickly it became clear the consensus of other developers was that using Vuforia's Object Recognition tool was very inconsistent when deployed to the Microsoft HoloLens, even the one provided in the sample\footnote{\url{https://developer.vuforia.com/forum/hololens/object-recognition-sample-doesnt-work-hololens}}\textsuperscript{,}\footnote{\url{https://developer.vuforia.com/forum/hololens/improve-object-tracking}}. A Vuforia Support reply on one post suggested that the user wait for the then unreleased Model Target tool\footnote{\url{https://developer.vuforia.com/forum/hololens/object-recognition-unsatisfactory-hololens}}. As so many minor things could affect the success of this object detection method (such as the surrounding environment during the object scanning phase, the material of the object itself and the lighting in the desired detection environment) and there was doubt it could be made to work on the HoloLens at all, it was at this point decided that another type of Vuforia target should be attempted.
 
 \subsubsection{Multi-Target}
-Some further research was done into whether anyone had successfully detected real-world objects using Vuforia on the HoloLens was done and a two-part blog post by Mike Taulty, a Microsoft UK developer, was found \cite{taulty16}. This page (and the previous part) detailed his attempts at simple object recognition using Vuforia's Multi-Targets.
+Some further research was done into whether anyone had successfully detected real-world objects using Vuforia on the HoloLens and a two-part blog post by Mike Taulty, a Microsoft UK developer, was found \cite{taulty16}. This page (and the previous part) detailed his attempts at simple object recognition using Vuforia's Multi-Targets.
 
 \paragraph{Choice of Target}
-Given that the goal was still to capture real-world objects, simply detecting image targets would not be enough. Once again the reasons for not trying Vuforia's other 3D targets, VuMark and Model Targets, were the same. VuMarks were disregarded as not true object capture, and Model Targets as the project did not have access to the 3D printer that they required to be implemented. As a result it was determined that attempting to capture real-world cuboid objects through the creation of a Multi-Target was to be the next stage of the development.
+Given that the goal was still to capture real-world objects, simply detecting image targets would not be enough. Once again the reasons for not trying Vuforia's other 3D targets, VuMark and Model Targets, were the same. VuMarks were disregarded as not true object capture, and Model Targets as the project did not have access to the 3D printer that they required to be implemented. Multi-Targets can be recognised even if a single child image target is detected and this raised the concern of whether they didn't represent true object capture either, but it was still the closest to the project's goals. As a result it was determined that attempting to capture real-world cuboid objects through the creation of a Multi-Target was to be the next stage of the development. 
 
 \paragraph{Creating a Multi-Target}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=10cm,height=10cm,keepaspectratio]{images/accessorybox}
-	\caption{Multi-Target Displayed in the Vuforia Target Manager}
+	\caption[Accessory Box Multi-Target]{Accessory Box Multi-Target in the Vuforia Target Manager}
 	\label{fig_accessorybox}
 \end{figure}
-A multi-target is Vuforia target that consists of multiple image targets in a defined geometric arrangement. The position and orientation of each image target is defined relative to the Multi-Target's origin and allows a the entire target to be detected and tracked whenever one of the child image targets is detected. A Multi-Target was created using the Vuforia Target Manager. A simple cuboid shape was chosen and images were captured of each of its faces and uploaded to the manager. The blank mutli-target was built by creating a new target, defining it as a cuboid, inputting its dimensions and then adding it to the previously created target database. At this point the created target could be edited to apply each image to the corresponding face on the virtual cuboid, as shown in Figure \ref{fig_accessorybox}. 
+
+A multi-target is a Vuforia target that consists of multiple image targets in a defined geometric arrangement. The position and orientation of each image target is defined relative to the Multi-Target's origin and allows a the entire target to be detected and tracked whenever one of the child image targets is detected. A Multi-Target was created using the Vuforia Target Manager. A simple cuboid box was chosen and images were captured of each of its faces and uploaded to the manager. The blank mutli-target was built by creating a new target, defining it as a cuboid, inputting its dimensions (in scale with the real box) and then adding it to the previously created target database. At this point the created target could be edited to apply each image to the corresponding face on the virtual cuboid, as shown in Figure \ref{fig_accessorybox}. Meeting the tool's image upload requirements was convoluted, the image needed to be a specific format, under a certain size, an exact aspect ratio was needed and if it was a pixel off the upload would fail without explanation. 
 
 \paragraph{Application}
-Once again the Unity project was updated to reflect the changes represented by the chosen target. The same target database was selected and a new scene was added that contained the ARCamera and the Multi-Target as a game object. This time, a wireframe box that was slightly larger than the Multi-Target object was created, applied to target and configured so that it would render over the real-world object when detected. This was done so that it would be clear once the application had recognised the box. Once again the application was exported to Visual Studio and deployed to the HoloLens, and once again detection was unsuccessful. After checking settings and trying to slightly adjust the environments lighting a decision was made to try a different Multi-Target that was richer in detail in the hopes that it could be more easily detected.
+Once again the Unity project was updated to reflect the changes represented by the chosen target. The same target database was selected and a new scene was added that contained the ARCamera and the Multi-Target as a game object. This time, a wireframe box that was slightly larger than the Multi-Target object was created, applied to target and configured so that it would render over the real-world object when detected. This was done so that it would be clear once the application had recognised the box. Once again the application was exported to Visual Studio and deployed to the HoloLens, and once again detection was unsuccessful.
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=10cm,height=8cm,keepaspectratio]{images/openglbox}
-	\caption[Multi-Target with Wireframe Box in Unity]{New Multi-Target with Wireframe Box in Unity Editor}
+	\caption[OpenGL Box Multi-Target in Unity]{OpenGL Box Multi-Target with Wireframe Cube in Unity Editor}
 	\label{fig_openglbox}
 \end{figure}
 
-For the creation of the second target care was taken to ensure there was even lighting on each of the surfaces, no glare was visible and no details of any surface were cut off when the pictures were taken. The target was created in much the same way as before, with the multiple images taken applied to a target with the dimensions of the new box in the Vuforia Target Manager. Shown in Figure \ref{fig_openglbox} is the Multi-Target with its surrounding wireframe box as shown in the Unity Editor. Even with the care taken, there was never any indication of successful object detection.
+\paragraph{Troubleshooting}
+After checking settings and trying to slightly adjust the environments lighting a decision was made to try a different Multi-Target that was richer in detail in the hopes that it could be more easily detected. For the creation of the second target care was taken to ensure there was even lighting on each of the surfaces, no glare was visible and no details of any surface were cut off when the pictures were taken. The target was created in much the same way as before, with the multiple images taken applied to a target with the dimensions of the new box in the Vuforia Target Manager. Shown in Figure \ref{fig_openglbox} is the Multi-Target with its surrounding wireframe box as shown in the Unity Editor. Even with the care taken, there was never any indication of successful object detection. After the usual checks, rebuilding and redeploying, it was determined that a potential underlying issue was the environment in which the object detection was being attempted.
 
-\paragraph{Changing Environment}
+For all the stages of development thus far the work had been undertaken in a wide open room with large floor to ceiling windows on one side that provided the environment with ample daylight. However, this light was noticeably coming from one direction with all objects producing shadows. It also produced glare on otherwise fairly matte objects, such as the second box used to produce a Multi-Target. Given the lack of success it was determined that testing would be taken to a smaller room with less directional light that featured a single overhead light in the hopes of providing a more diffuse light setting. In this new environment each of the previous implementations and all the available 3D targets were tested.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=8cm,keepaspectratio]{images/caolila}
+	\caption[Whisky Box Multi-Target]{Whisky Box Multi-Target in the Target Manager}
+	\label{fig_caolila}
+\end{figure}
+
+After multiple attempts at detecting these objects, a third Multi-Target was created using a box that better suited Vuforia's listed requirements for multi-targets. The box chosen was a whisky box as it was rich in detail, made of a matte material, had contrasting regions and none of the sides were the same. The target in its finished form in the Vuforia Target Manager can be seen in Figure \ref{fig_caolila}. Whilst a significant amount of thought and care was put into ensuring an even lighting distribution across each face of the object and a diffuse and well-lit environment the object was still not detected.
+
+\subsubsection{Development Conclusions}
+By this stage the development period that was available was coming to a close. A few final attempts were made at detection by changing a number of variables that could have had an affect on the success of the application. The ARCamera's field of view was varied and tested, a range of capabilities in Unity's \textit{Publisher Settings} were enabled and the wireframe box was edited in the hopes that it simply wasn't visible enough before. None of these attempts were successful and the development stage ended without achieving any of the projects initial goals and only delivering some implementations without much functionality.
 
 \newpage
 \section{Evaluation}
-%not testing image targets
-%not seeking out a 3D printer
-%using shiny pomo
+The aim of this project was to evaluate the effectiveness of real-world object capture and real-time object manipulation on the Microsoft HoloLens using the tools provided by the Vuforia SDK. Due to the lack of success at producing any functional applications that could recognise and track simple objects, the project did not progress to the stage of simple object manipulation, let alone real-time manipulations. As a result, there is unfortunately nothing to evaluate in terms of the effectiveness of real-time application of simple post-processing effects to manipulate real-world objects. However, the project does allow for a discussion on the effectiveness of real-world object capture, especially with regards to the extent by which it can be achieved on the HoloLens using Vuforia.
+
+\subsection{Object Capture}
+When the project was in its infancy, the aim was to capture simple objects in a mixed reality environment whilst using the HoloLens. This was envisioned as detecting and highlighting new objects in real-time. Of course, very early on during the initial research it was realised that such software didn't exist. Instead, via the features provided by the Vuforia SDK, detecting objects required a database of information that can be referenced when scanning the environment for the natural features that make up the target object. Many varied attempts were made, with multiple Vuforia tools and features utilised, but on no occasion was object detection achieved. As a result of the work done in this project it can be said that real-world object capture using Vuforia on the HoloLens is rather ineffective. That statement is also supported by the many others, referenced earlier, who were also facing issues when attempting the same.
+
+\subsection{Applicability of the Tools}
+All the pertinent tools used for the project were ultimately successful. The results of the initial research done all pointed towards the use of the same few tools and there is good reason for this.
+\subsubsection{Vuforia}
+The tools Vuforia provide are extensive and, for the most part, fairly intuitive to use. The Vuforia SDK is recommended by Microsoft when wanting to build interactive augmented reality applications and in many respects it is clear why. The features they provide were taken advantage of during development and without which the project would have had very little success. However, there were issues with Vuforia in specific regards to its integration with and operation on the HoloLens. Vuforia's features were much more easily implemented on an Android device. This was shown when the Vuforia Object Scanner used produced an object target that the phone was able to detect very easily. When trying to detect the same object target using the HoloLens there was no such success.
+
+\subsubsection{Unity}
+Unity's usage wasn't without issues. Many of the required settings or features that needed to be enabled were not well laid out or easy to find. However it was otherwise a very helpful tool for the project. When it was updated during the project so that it came with the Vuforia SDK integrated, the ease of use when creating these applications was noticeably increased. Beyond that, the tool is very intuitive to use, has good support for the management of multiple Unity projects and was key to the progression of the project as a whole.
+
 \newpage
 \section{Conclusion}
 \subsection{Has the Project met its Aims?}
-\subsection{Future Work}
 \subsection{Personal Reflection}
+%rationale for the decisions taking
+%not testing image targets
+%not seeking out a 3D printer
+%using shiny pomo
+%willingness to leave majority of the leg-work to late stage impacted decisions
+%learning outcomes
+\subsubsection{Learning Outcomes}
+\paragraph{L.O.1: Manage a substantial individual project, including planning, documentation and control.}
+\paragraph{L.O.2: Construct a focussed problem statement and conduct a suitable investigation, including literature or technology review, into the context of that problem.}
+\paragraph{L.O.3: Demonstrate professional competence by applying appropriate theory and practice to the analysis, design, implementation and evaluation of a non-trivial set of deliverables.}
+\paragraph{L.O.4: Show a capacity for self-appraisal by analysing the strengths and weaknesses of the project process and outcomes with reference to the initial objectives and to the work of others.}
+\paragraph{L.O.5: Provide evidence of the foregoing in the form of a report.}
+
+\subsection{Future Work}
+%more professional environment
+%3d printer -> model targets
+%vumarks
+%minipulations
+%
 
 \newpage
 \begin{singlespace}	
