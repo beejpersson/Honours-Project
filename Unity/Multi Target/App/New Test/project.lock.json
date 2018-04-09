@@ -15853,12 +15853,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\New Test\\New Test.csproj",
+      "projectUniqueName": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\New Test\\New Test.csproj",
       "projectName": "New Test",
-      "projectPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\New Test\\New Test.csproj",
-      "projectJsonPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\New Test\\project.json",
+      "projectPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\New Test\\New Test.csproj",
+      "projectJsonPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\New Test\\project.json",
       "packagesPath": "C:\\Users\\Beej\\.nuget\\packages\\",
-      "outputPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\New Test\\obj\\",
+      "outputPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\New Test\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\Beej\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -15871,8 +15871,8 @@
       "frameworks": {
         "uap10.0.10240": {
           "projectReferences": {
-            "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
-              "projectPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
+            "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
+              "projectPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
             }
           }
         }

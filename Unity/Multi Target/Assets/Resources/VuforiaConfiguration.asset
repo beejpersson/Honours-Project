@@ -44,9 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - HonoursProject_OT
+    - HonoursProject
     dataSetsToActivate:
-    - HonoursProject_OT
+    - HonoursProject
   videoBackground:
     clippingMode: 0
     numDivisions: 2

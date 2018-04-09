@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>863db3bf-8f34-430a-8913-4400f2c47867</PackageIdentityName>
     <PackageIdentityPublisher>CN=DefaultCompany</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\bin\x86\Debug\New Test.exe">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\bin\x86\Debug\New Test.exe">
       <PackagePath>entrypoint\New Test.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Beej\.nuget\packages\microsoft.applicationinsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
@@ -349,7 +349,7 @@
     <AppxPackagedFile Include="C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineProxy.dll">
       <PackagePath>UnityEngineProxy.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Unprocessed\WinRTLegacy.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Unprocessed\WinRTLegacy.dll">
       <PackagePath>WinRTLegacy.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityPlayer.dll">
@@ -373,130 +373,127 @@
     <AppxPackagedFile Include="C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\WinRTBridge.winmd">
       <PackagePath>WinRTBridge.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Resource.res">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Resource.res">
       <PackagePath>Resource.res</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\HonoursProject.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject_OT.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject_OT.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\HonoursProject_OT.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Images.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Images.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Images.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\VuforiaWrapper.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\VuforiaWrapper.dll">
       <PackagePath>VuforiaWrapper.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Vuforia.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Vuforia.dll">
       <PackagePath>Vuforia.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\boot.config">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\globalgamemanagers">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\level0">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\level0">
       <PackagePath>Data\level0</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\level1">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\level1">
       <PackagePath>Data\level1</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\level2">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\level2">
       <PackagePath>Data\level2</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\Resources\unity default resources">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\Resources\unity_builtin_extra">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\Resources\unity_builtin_extra">
       <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\globalgamemanagers.assets">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\resources.assets">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\resources.assets">
       <PackagePath>Data\resources.assets</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\sharedassets0.assets">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\sharedassets1.assets">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\sharedassets1.assets">
       <PackagePath>Data\sharedassets1.assets</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\sharedassets2.assets">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\sharedassets2.assets">
       <PackagePath>Data\sharedassets2.assets</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\level2.resS">
-      <PackagePath>Data\level2.resS</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\sharedassets0.assets.resS">
-      <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\sharedassets1.assets.resS">
-      <PackagePath>Data\sharedassets1.assets.resS</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\sharedassets2.assets.resS">
-      <PackagePath>Data\sharedassets2.assets.resS</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\managedAssemblies.txt">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\managedAssemblies.txt">
       <PackagePath>Data\managedAssemblies.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\nativePlugins.txt">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\nativePlugins.txt">
       <PackagePath>Data\nativePlugins.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject.dat">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\sharedassets0.assets.resS">
+      <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\sharedassets1.assets.resS">
+      <PackagePath>Data\sharedassets1.assets.resS</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\sharedassets2.assets.resS">
+      <PackagePath>Data\sharedassets2.assets.resS</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\HonoursProject.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject_OT.dat">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\HonoursProject_OT.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\HonoursProject_OT.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Images.dat">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Images.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Images.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.dat">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.dat">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.dat">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.dat</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.16299.0\\redist\Debug\x86\ucrtbased.dll">
@@ -505,176 +502,176 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.TilemapModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.TilemapModule.dll">
       <PackagePath>UnityEngine.TilemapModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.TextRenderingModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.TextRenderingModule.dll">
       <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.TerrainPhysicsModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.TerrainPhysicsModule.dll">
       <PackagePath>UnityEngine.TerrainPhysicsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UIModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UIModule.dll">
       <PackagePath>UnityEngine.UIModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UIElementsModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UIElementsModule.dll">
       <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.SpriteMaskModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.SpriteMaskModule.dll">
       <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.SharedInternalsModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.SharedInternalsModule.dll">
       <PackagePath>UnityEngine.SharedInternalsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.SpriteShapeModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.SpriteShapeModule.dll">
       <PackagePath>UnityEngine.SpriteShapeModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.TerrainModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.TerrainModule.dll">
       <PackagePath>UnityEngine.TerrainModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.StyleSheetsModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.StyleSheetsModule.dll">
       <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.VRModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.VRModule.dll">
       <PackagePath>UnityEngine.VRModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.VideoModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.VideoModule.dll">
       <PackagePath>UnityEngine.VideoModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.VehiclesModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.VehiclesModule.dll">
       <PackagePath>UnityEngine.VehiclesModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.WebModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.WebModule.dll">
       <PackagePath>UnityEngine.WebModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.WindModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.WindModule.dll">
       <PackagePath>UnityEngine.WindModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UnityConnectModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UnityConnectModule.dll">
       <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UnityAnalyticsModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UnityAnalyticsModule.dll">
       <PackagePath>UnityEngine.UnityAnalyticsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UNETModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UNETModule.dll">
       <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UnityWebRequestAudioModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UnityWebRequestAudioModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UnityWebRequestWWWModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UnityWebRequestWWWModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UnityWebRequestTextureModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UnityWebRequestTextureModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestTextureModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UnityWebRequestModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UnityWebRequestModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.ClothModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.ClothModule.dll">
       <PackagePath>UnityEngine.ClothModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.AudioModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.AudioModule.dll">
       <PackagePath>UnityEngine.AudioModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.AssetBundleModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.AssetBundleModule.dll">
       <PackagePath>UnityEngine.AssetBundleModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.CoreModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.CoreModule.dll">
       <PackagePath>UnityEngine.CoreModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.dll">
       <PackagePath>UnityEngine.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.DirectorModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.DirectorModule.dll">
       <PackagePath>UnityEngine.DirectorModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.CrashReportingModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.CrashReportingModule.dll">
       <PackagePath>UnityEngine.CrashReportingModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.AccessibilityModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.AccessibilityModule.dll">
       <PackagePath>UnityEngine.AccessibilityModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.AIModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.AIModule.dll">
       <PackagePath>UnityEngine.AIModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.ARModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.ARModule.dll">
       <PackagePath>UnityEngine.ARModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.AnimationModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.AnimationModule.dll">
       <PackagePath>UnityEngine.AnimationModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.ParticleSystemModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.ParticleSystemModule.dll">
       <PackagePath>UnityEngine.ParticleSystemModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.ParticlesLegacyModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.ParticlesLegacyModule.dll">
       <PackagePath>UnityEngine.ParticlesLegacyModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.PerformanceReportingModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.PerformanceReportingModule.dll">
       <PackagePath>UnityEngine.PerformanceReportingModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.ScreenCaptureModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.ScreenCaptureModule.dll">
       <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.PhysicsModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.PhysicsModule.dll">
       <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.Physics2DModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.Physics2DModule.dll">
       <PackagePath>UnityEngine.Physics2DModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.GridModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.GridModule.dll">
       <PackagePath>UnityEngine.GridModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.GameCenterModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.GameCenterModule.dll">
       <PackagePath>UnityEngine.GameCenterModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.ImageConversionModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.ImageConversionModule.dll">
       <PackagePath>UnityEngine.ImageConversionModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.JSONSerializeModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.JSONSerializeModule.dll">
       <PackagePath>UnityEngine.JSONSerializeModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.InputModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.InputModule.dll">
       <PackagePath>UnityEngine.InputModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.IMGUIModule.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.IMGUIModule.dll">
       <PackagePath>UnityEngine.IMGUIModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.Timeline.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.Timeline.dll">
       <PackagePath>UnityEngine.Timeline.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\nunit.framework.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\nunit.framework.dll">
       <PackagePath>nunit.framework.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.UI.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.UI.dll">
       <PackagePath>UnityEngine.UI.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.SpatialTracking.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.SpatialTracking.dll">
       <PackagePath>UnityEngine.SpatialTracking.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.Analytics.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.Analytics.dll">
       <PackagePath>UnityEngine.Analytics.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.HoloLens.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.HoloLens.dll">
       <PackagePath>UnityEngine.HoloLens.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Vuforia.UnityExtensions.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Vuforia.UnityExtensions.dll">
       <PackagePath>Vuforia.UnityExtensions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.StandardEvents.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.StandardEvents.dll">
       <PackagePath>UnityEngine.StandardEvents.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\UnityEngine.Networking.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\UnityEngine.Networking.dll">
       <PackagePath>UnityEngine.Networking.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\Assembly-CSharp.dll">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\Assembly-CSharp.dll">
       <PackagePath>Assembly-CSharp.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\New Test\App\New Test\bin\x86\Debug\Core\New Test.exe">
+    <AppxPackagedFile Include="D:\Beej\Documents\Work\Honours Project\Honours-Project\Unity\Multi Target\App\New Test\bin\x86\Debug\Core\New Test.exe">
       <PackagePath>New Test.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

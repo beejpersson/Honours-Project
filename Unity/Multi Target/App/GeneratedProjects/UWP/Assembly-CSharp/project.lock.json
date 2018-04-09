@@ -15778,12 +15778,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
+      "projectUniqueName": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
-      "projectJsonPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\project.json",
+      "projectPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
+      "projectJsonPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\project.json",
       "packagesPath": "C:\\Users\\Beej\\.nuget\\packages\\",
-      "outputPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\New Test\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\obj\\x86\\Debug\\",
+      "outputPath": "D:\\Beej\\Documents\\Work\\Honours Project\\Honours-Project\\Unity\\Multi Target\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\obj\\x86\\Debug\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\Beej\\AppData\\Roaming\\NuGet\\NuGet.Config",

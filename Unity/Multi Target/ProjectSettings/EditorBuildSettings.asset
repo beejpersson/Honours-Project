@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SamplesResources/Scenes/1-Loading.unity
     guid: 54e881997d4fb50489884fda0201cefe
-  - enabled: 0
+  - enabled: 1
     path: Assets/SamplesResources/Scenes/2-ModelTarget.unity
     guid: 530386685ba085242832bd5cc78d7222
-  - enabled: 1
+  - enabled: 0
     path: Assets/SamplesResources/Scenes/2-MultiTarget.unity
     guid: 482678cd8b07a784193d6a2314793668
