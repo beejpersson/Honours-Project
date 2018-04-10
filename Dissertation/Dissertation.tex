@@ -136,7 +136,7 @@ The objectives of this project can be summarised in these milestones:
 And, if possible given the scope of the project:
 \begin{itemize}\itemsep0pt
 	\item multiple real-time manipulations of multiple detected objects
-	\item determining the limits of the HoloLens hardware for real-world object manipulation
+	\item determining the limits of the HoloLens' hardware for real-world object manipulation
 \end{itemize}
 
 \subsection{Scope and Limitations}
@@ -162,13 +162,13 @@ Deploying applications to the HoloLens could be done either over WiFi or via a U
 \subsection{Structure of this Dissertation}
 This dissertation is split into three primary sections.
 
-The first section seeks to provide a background to the technologies utilised by the project. The second section details the methodology followed and documents the resulting implementation. The final section is an evaluation of the application and a conclusion to the dissertation and project as a whole.
+The first section seeks to provide a background to the technologies the project makes use of. The second section details the methodology followed and documents the resulting implementation. The final section is an evaluation of the application and a conclusion to the dissertation and project as a whole.
 
 Section one (Chapter 2) addresses the background information associated with the project. It looks at the three primary concepts and technologies utilised: mixed reality, the Microsoft HoloLens and the Vuforia.
 
-Section two (Chapters 3 and 4) details the approach taken to the project and tools that were used. It includes a look at the specifics of the work undertaken, any problems that were encountered and how that affected the development of the deliverables.
+Section two (Chapters 3 and 4) details the approach taken to the project and the tools that were used. It includes a look at the specifics of the work undertaken, any problems that were encountered and how that affected the development of the deliverables.
 
-Section three (Chapters 5 and 6) provides an evaluation of the implementation, its relation to the initial goals and a discussion of whether the results were successful. It also provides a conclusion that summarises the findings of the project and highlights future work this project stands to benefit from. This section also includes a reflection on me, the author, and my feelings about the project.
+Section three (Chapters 5 and 6) provides an evaluation of the implementation, applicability of the chosen tools and a discussion of whether the results were successful. It also provides a conclusion that summarises the findings of the project in relation to the initial goals and includes a personal reflection and a look at what I have learned. This section also highlights future work this project stands to benefit from.
 
 \newpage
 \section{Background}
@@ -334,7 +334,7 @@ Microsoft provides a comprehensive set of online documents to guide users new to
 At this stage the focus of the work was on understanding how the Vuforia SDK worked and how to build applications that took advantage of the functionality it supports. During the early stages of development Microsoft's guides recommended that the Vuforia SDK be installed separately and integrated into Unity 5.6 manually. This changed, however, during the early development stages and with the release of Unity 2017.1 the Vuforia Engine was delivered with it.
 
 \paragraph{Vuforia's Samples}
-Vuforia provide a comprehensive asset package that can be imported into Unity\footnote{\url{https://assetstore.unity.com/packages/templates/packs/vuforia-core-samples-99026}}. This contains the majority of the default target types, such as image targets, object recognition and multi-targets. It also contains a lot of miscellaneous media, such as splash and loading screen images, meshes and materials,  as well as an AR camera object.
+Vuforia provide a comprehensive asset package that can be imported into Unity\footnote{\url{https://assetstore.unity.com/packages/templates/packs/vuforia-core-samples-99026}}. This contains the majority of the default target types, such as image targets, object targets and multi-targets. It also contains a lot of miscellaneous media, such as splash and loading screen images, meshes and materials,  as well as an AR camera object.
 
 Vuforia also provide sample applications for digital eyewear that provide some basic scenes containing example targets\footnote{\url{https://developer.vuforia.com/downloads/samples}}. Much of the steps taken to get these samples running was determined by combining information detailed in the guides provided by Microsoft, Unity and Vuforia. However troubleshooting Vuforia's forums was required as often the guides lacked necessary information. 
 
@@ -342,16 +342,16 @@ The process involved acquiring and applying a Vuforia \textit{Eyewear App Licens
 
 \subsection{Implementation}
 \subsubsection{Object Recognition}
-At this stage no testing to ensure that Vuforia could detect the simpler targets was undertaken. The downloadable image targets that could be printed off were not used. Instead an attempt at capturing objects using Vuforia's object recognition was undertaken.
+At this stage no testing to ensure that Vuforia could detect the simpler targets was undertaken. The downloadable image targets that could be printed off were not used. Instead an attempt at capturing objects using Vuforia's Object Recognition was undertaken.
 
 \paragraph{Choice Over Other 3D Targets}
-Vuforia's HoloLens sample contained multiple sample scenes, each showcasing a different target type. One of these was a scene named \textit{ObjectReco} that included the object target as a Unity game object. The decision to begin to attempt object capture using Vuforia's object recognition feature rather than its two other 3D targets, VuMark and Model Targets, was twofold. Firstly, using model targets were disregarded earlier due to the constraint of lacking a 3D printer that is required for its functionality. There was also no example scene of model targets provided in the HoloLens sample at the time due to them being relatively new. Secondly, VuMarks were disregarded as they are not true object capture, rather they recognise the 2D VuMark that is applied to a physical object and gather the physical object's information as a result.
+Vuforia's HoloLens sample contained multiple sample scenes, each showcasing a different target type. One of these was a scene named \textit{ObjectReco} that included the object target as a Unity game object. The decision to begin to attempt object capture using Vuforia's Object Recognition feature rather than its two other 3D targets, VuMark and Model Targets, was twofold. Firstly, using model targets were disregarded earlier due to the constraint of lacking a 3D printer that is required for its functionality. There was also no example scene of model targets provided in the HoloLens sample at the time due to them being relatively new. Secondly, VuMarks were disregarded as they are not true object capture, rather they recognise the 2D VuMark that is applied to a physical object and gather the physical object's information as a result.
 
 \paragraph{Creating an Object Target}
-Vuforia's HoloLens sample contained a object recognition game object that was a representation of a Mars habitat. Vuforia provided media that could be printed off and folded such that it would become physical paper representation the object target. Since Vuforia provided the tools to create new object targets using the Vuforia Object Scanner and the first goal of the project was to capture real-world objects, the Mars habitat wasn't used.
+Vuforia's HoloLens sample contained an Object Target game object that was a representation of a Mars habitat. Vuforia provided media that could be printed off and folded such that it would become a physical paper representation of the object target. Since Vuforia provided the tools to create new object targets using the Vuforia Object Scanner and the first goal of the project was to capture real-world objects, the Mars habitat wasn't used.
 
 \paragraph{Vuforia Object Scanner}
-Vuforia Object Scanner is provided as an Android Package (APK) and was installed onto an Android device using Android Debug Bridge (adb)\footnote{\url{https://developer.android.com/studio/command-line/adb.html}}. Vuforia also provide an Object Scanning Target\footnote{\url{https://vuforialibrarycontent.vuforia.com/Images/Fall2014/ObjectScanningTarget.PNG}} that was to be printed off and used by the object scanner to determine the position of the Object Target relative to it's local origin.
+Vuforia Object Scanner is provided as an Android Package (APK) and was installed onto an Android device using Android Debug Bridge (adb)\footnote{\url{https://developer.android.com/studio/command-line/adb.html}}. Vuforia also provide an Object Scanning Target\footnote{\url{https://vuforialibrarycontent.vuforia.com/Images/Fall2014/ObjectScanningTarget.PNG}} sheet that was to be printed off and used by the object scanner to determine the position of the Object Target relative to it's local origin.
 
 \begin{figure}[!h]
 	\centering
@@ -424,42 +424,76 @@ By this stage the development period that was available was coming to a close. A
 
 \newpage
 \section{Evaluation}
-The aim of this project was to evaluate the effectiveness of real-world object capture and real-time object manipulation on the Microsoft HoloLens using the tools provided by the Vuforia SDK. Due to the lack of success at producing any functional applications that could recognise and track simple objects, the project did not progress to the stage of simple object manipulation, let alone real-time manipulations. As a result, there is unfortunately nothing to evaluate in terms of the effectiveness of real-time application of simple post-processing effects to manipulate real-world objects. However, the project does allow for a discussion on the effectiveness of real-world object capture, especially with regards to the extent by which it can be achieved on the HoloLens using Vuforia.
+This chapter looks to evaluate the effectiveness of real-world object capture and real-time object manipulation on the Microsoft HoloLens and to discuss the applicability of the chosen tools. Due to the lack of success at producing any functional applications that could recognise and track simple objects, the project did not progress to the stage of simple object manipulation, let alone real-time manipulations. As a result, there is unfortunately nothing to evaluate in terms of the effectiveness of real-time manipulation of real-world objects. However, the project does allow for a discussion on the effectiveness of real-world object capture, especially with regards to the extent by which it can be achieved on the HoloLens using Vuforia.
 
 \subsection{Object Capture}
-When the project was in its infancy, the aim was to capture simple objects in a mixed reality environment whilst using the HoloLens. This was envisioned as detecting and highlighting new objects in real-time. Of course, very early on during the initial research it was realised that such software didn't exist. Instead, via the features provided by the Vuforia SDK, detecting objects required a database of information that can be referenced when scanning the environment for the natural features that make up the target object. Many varied attempts were made, with multiple Vuforia tools and features utilised, but on no occasion was object detection achieved. As a result of the work done in this project it can be said that real-world object capture using Vuforia on the HoloLens is rather ineffective. That statement is also supported by the many others, referenced earlier, who were also facing issues when attempting the same.
+When the project was in its infancy, the aim was to capture simple objects in a mixed reality environment whilst using the HoloLens. This was envisioned as detecting and highlighting new objects in real-time. Of course, very early on during the initial research it was realised that such software didn't exist. Instead, via the features provided by the Vuforia SDK, detecting objects required a database of information that can be referenced when scanning the environment for the natural features that make up the target object. Many varied attempts were made, with multiple Vuforia tools and features utilised, but on no occasion was object detection achieved. As a result of the work done in this project it can be said that real-world object capture using Vuforia on the HoloLens is rather ineffective. That statement is also supported by the many others found online, referenced earlier, who were also facing issues when attempting the same. However, there exists examples of projects where a real-world object was detected in space (and augmented such that is was clear the location of the object was being tracked), which was achieved using features provided by Vuforia whilst running on the HoloLens. Whilst these projects did typically utilise Vuforia's VuMarks or Multi-Targets and were not strictly detecting the physical object as a whole, and whilst in one case the author of such a project was a Microsoft developer, they do exist. Therefore, it is worth qualifying that evaluation with an acknowledgement that it is based off of this project's inability to implement such detection rather than a claim that it can't be done.
 
 \subsection{Applicability of the Tools}
-All the pertinent tools used for the project were ultimately successful. The results of the initial research done all pointed towards the use of the same few tools and there is good reason for this.
+All the pertinent tools used for the project were ultimately successful. The results of the initial research done all pointed towards the use of the same few tools and there is good reason for this. Each of the suggested tools fulfilled the purposes for which they were chosen. 
+
+\subsubsection{Visual Studio}
+Visual Studio was only used to deploy an application to the HoloLens and occasionally to debug the application whilst it was running. For these purposes, barring occasional build errors usually caused by Unity, it was flawless. Whilst its use time in the project was low, it was a vital part to the development process.
+
 \subsubsection{Vuforia}
-The tools Vuforia provide are extensive and, for the most part, fairly intuitive to use. The Vuforia SDK is recommended by Microsoft when wanting to build interactive augmented reality applications and in many respects it is clear why. The features they provide were taken advantage of during development and without which the project would have had very little success. However, there were issues with Vuforia in specific regards to its integration with and operation on the HoloLens. Vuforia's features were much more easily implemented on an Android device. This was shown when the Vuforia Object Scanner used produced an object target that the phone was able to detect very easily. When trying to detect the same object target using the HoloLens there was no such success.
+The tools Vuforia provide are extensive and, for the most part, fairly intuitive to use. The Vuforia SDK is recommended by Microsoft when wanting to build interactive augmented reality applications and in many respects it is clear why. The features they provide were taken advantage of during development and without which the project would have had very little success. However, there were issues with Vuforia in specific regards to its integration with and operation on the HoloLens. Vuforia's features were much more easily implemented on an Android device. This was shown when the Vuforia Object Scanner used produced an object target that the phone was able to detect very easily. When trying to detect the same object target using the HoloLens very shortly after, there was no such success. There were also problems with a lack of sufficient or reliable documentation available in regards to Vuforia's use with the HoloLens. However, even with the problems, this is technology that is at the forefront of what is capable with the available hardware and no similar object detection software for the HoloLens exists. Given this, Vuforia was an essential tool for the project and will likely continue to be integral for any other project looking at interaction with the real-world in a mixed reality environment. It is worth noting here that at the time of writing many of the guides available online have been updated or rewritten entirely since, as discussed, this is a new technology and is still evolving.
 
 \subsubsection{Unity}
 Unity's usage wasn't without issues. Many of the required settings or features that needed to be enabled were not well laid out or easy to find. However it was otherwise a very helpful tool for the project. When it was updated during the project so that it came with the Vuforia SDK integrated, the ease of use when creating these applications was noticeably increased. Beyond that, the tool is very intuitive to use, has good support for the management of multiple Unity projects and was key to the progression of the project as a whole.
-
+ 
 \newpage
 \section{Conclusion}
+This chapter is a summary of the findings of the project and details a discussion of whether it met its original goals. It provides a personal reflection on the problems encountered and an overview of what was learned. Additionally, it includes a look at potential work that it could stand to benefit from in the future.
+
 \subsection{Has the Project met its Aims?}
+The main aim of this project was to evaluate the effectiveness of real-world object capture in a mixed reality environment using Vuforia on the Microsoft HoloLens. This has been achieved to some extent in that an evaluation of real-world object capture was possible based on the results of the project and, more specifically, on the lack of success of the implementation. However, it can not be a thorough evaluation as the project did not explore every target type Vuforia allows, nor did it achieve the results that some related projects seem to have achieved. The primary aim of the project was this evaluation and as it was limited by those restrictions the aim was only partially met.
+
+Additionally, however, one of the deliverables this project was looking to develop was an application that allowed users to interact with real-world objects in a mixed reality environment by employing object detection technologies on the Microsoft HoloLens. More than a simple evaluation of the effectiveness of object detection, there was the aim to have a functioning implementation that could showcase object capture in space. This aim was unfortunately not met. All of the implementations produced essentially amount to immersive applications that do not achieve even the simplest of object detection and tracking. This is a disappointing outcome given the scope of the project, the time available and the amount of work undertaken.
+
+As a result of the lack of this initial goal, none of the subsequent milestones, such as simple object manipulation, multiple simultaneous object detection and real-time object manipulation, were even attempted. Manipulation of real-world objects would not have been possible without successful object detection and therefore could not have been implemented. Further to this, the aim to determine the limits of the HoloLens' hardware for the real-time manipulation of multiple real-world object objects was left completely unexplored for the same reason.
+
+\subsubsection{Summary of Findings}
+In summary, this project was unable to implement any form of real-world object detection in a mixed reality environment using Vuforia on the Microsoft HoloLens. The project did produce a number of other findings that can benefit future development. It did determine that Vuforia's Object Recognition feature is mostly unsupported on the HoloLens despite being part of Vuforia's HoloLens Sample Project. Successful object detection is usually a result of Vuforia's image detection capabilities, such as VuMarks and Multi-Target, masked as object detection by storing positional data of child targets relevant to the parent object target. The project also highlighted that the full functionality of Vuforia's tools are still in development and undergoing regular improvements. Much of the project's failures can be attributed to the difficulty when creating usable targets. There were many procedures to follow to reduce the chance that a target couldn't be detected with no indication as to what could be causing issues. Ultimately the project found that producing detectable objects using Vuforia's targets on the Microsoft HoloLens was a complex and often convoluted process that unfortunately led to a lack of success regarding the project's aims.
+
 \subsection{Personal Reflection}
-%rationale for the decisions taking
-%not testing image targets
-%not seeking out a 3D printer
-%using shiny pomo
-%willingness to leave majority of the leg-work to late stage impacted decisions
-%learning outcomes
+This project was in many ways disappointing for me and showed an absence planning and time management. Due to starting development fairly late given the time allotted for the project, many aspects of the work undertaken during the development process were rushed and some more time-consuming potential solutions ignored. This is reflected in the rationale of many of the decisions made during the development process described earlier. I chose not to test the simpler image targets (that could be printed off) provided in the sample projects by Vuforia as they weren't pertinent to the goal of capturing real-world objects. I chose not to explore Vuforia's Model-Targets due to not having a 3D printer, but there may have been ways to gain access to such a device if its need had been realised earlier. There are also a number of more minor mistakes that can be seen, such as using an object that produces a noticeable amount of glare when creating an Object Target. This meant the position of the object needed to be the same during detection testing as it was when the target had been created.
+
+To produce a successful piece of work of this magnitude demands proper forethought and a real attempt at sticking to a plan of work throughout. The lack of this is in my project is clear. Whilst plans were drawn out on multiple occasions, following through with more than the plan's first step rarely happened. The fact that the majority of the development process didn't begin until such a stage that what was done was rushed is evidence of this. My tendency to do work in this manner is what causes shortcomings in all my projects and can  only be amplified for a project of this scale.
+
+Nonetheless I feel there are aspects of the project that I can be proud of. I had the ability to work hard when I needed to. I was able to produce a thoroughly researched background of the technology that underpinned the the rest of the development. I also produced a well-reasoned evaluation of the outcomes of the project, with respect to the initial goals and to related work, and of the tools used. 
+
 \subsubsection{Learning Outcomes}
 \paragraph{L.O.1: Manage a substantial individual project, including planning, documentation and control.}
+I showed a somewhat limited ability to manage this project, thorough planning was missing and abiding by the time constraints was mostly unsuccessful. However, there was still an amount of work undertaken and findings produced to show some success in the management of a substantial individual project, including completing the required documentation to a high standard.
+
 \paragraph{L.O.2: Construct a focussed problem statement and conduct a suitable investigation, including literature or technology review, into the context of that problem.}
+The problem the project sought to address was well-reasoned and provided a clear set of relevant milestones. The technological review was thorough and applicable to the problem discussed as well as providing the foundations upon which the project was carried out.
+
 \paragraph{L.O.3: Demonstrate professional competence by applying appropriate theory and practice to the analysis, design, implementation and evaluation of a non-trivial set of deliverables.}
+The steps taken and outlined in the methodology display thoughtful analysis of the problems at hand and a logical process by which I sought to solve them. Unfortunately due to there being no successful implementation deliverable this was not done as well as I could have hoped. The evaluation of the results of the project were appropriately qualified and supported with evidence.
+
 \paragraph{L.O.4: Show a capacity for self-appraisal by analysing the strengths and weaknesses of the project process and outcomes with reference to the initial objectives and to the work of others.}
+I made a real attempt to adequately criticise myself for my failures but also to highlight aspects worth praising. I also compare my findings to related work and to the initial goals of the project.
+
 \paragraph{L.O.5: Provide evidence of the foregoing in the form of a report.}
+I completed the project's documentation successfully, including evidence of having at least partial achievement for all the previous learning outcomes, and fulfilling all the requirements laid out for the dissertation and its formatting specifications.
 
 \subsection{Future Work}
-%more professional environment
-%3d printer -> model targets
-%vumarks
-%minipulations
-%
+The work that can still be done on this project is substantial. A variety of avenues for success were not explored and many of the milestones were not attempted.
+\subsubsection{Object Detection}
+The primary goal for the future would be to produce a more professional object target creation environment. By building a scene with even surroundings and lighting using a setting similar to those used in photography studios, the target's specific recognition data would be better produced. This is something that would likely significantly increase the chance of object detection and allow for detection in variety of environments.
+
+The next stage this project would have explored was Vuforia's Model-Targets. These were previously dismissed due to lacking a 3D printer which was required for functionality. Additionally capturing a physical object that was simply a 3D print of the virtual model seemed initially less in line with the project's goals. However given detection was yet to occur, this would be the next logical tool to explore. 
+
+Another of Vuforia's tools for object detection is VuMark. Using these the object geometry data can be retrieved from the database and used to produce same-size virtual content in the place of the real-world object on which the VuMark is placed. VuMarks should allow for better consistency with detection as well due to the more unique patterns they employ, similar to QR codes.
+
+\subsubsection{Object Manipulation}
+As is in line with the initial project goals, another path that could be taken is one which would have been explored had object detection and tracking occurred. Once an object can be reliably recognised and a 3D render of that object put in its place, multiple simple post-processing effects could be applied to manipulate the object's appearing. Expanding on this, the tools to choose what manipulations are applied and having these manipulations occur in real-time on a variety of desired objects could be built. By providing this, the ultimate goal of producing a tool that allows a user to interact and manipulate their local space could achieved.
+
+At this stage the project could benefit from an analysis of the capabilities of the Microsoft HoloLens' hardware. Tests could be run to determine to what extent manipulations can happen in real-time and on how many objects. This would be carried out by testing the amount of time taken to produce the successful manipulation and an evaluation of whether this is considered real-time done by performing a user study.
+
+\subsubsection{Technological Application}
+As a result of the potential work detailed here, the technology could be developed to the stage where it can be used by others in ways similar to those described in the project's motivation. There could also be a number novel ways to use the technology for creative endeavours. Objects could be made to grow or shrink in space, or to seemingly disappear altogether. The project could also provide the basis for a detailed story-driven game that requires interaction with the real-world but augmented by the virtual.
 
 \newpage
 \begin{singlespace}	
@@ -474,7 +508,7 @@ Unity's usage wasn't without issues. Many of the required settings or features t
 \newpage
 \begin{appendices}
 \section{Initial Project Overview}
- \ \\ \textbf{SOC10101 Honours Project (40 Credits)} \\ \\
+\textbf{SOC10101 Honours Project (40 Credits)} \\ \\
 \textbf{Title of Project:} \\
 Real world object-capture in a mixed-reality environment. \\ \\
 \textbf{Overview of Project Content and Milestones:} \\
@@ -516,7 +550,7 @@ Vuforia Specific: \\
 Mixed-reality is an emerging games technology with great potential for immersive story-telling and innovative game design. This project looks to explore an aspect of that and if successful could be beneficial to those interested in designing such games. \\ \\
 \textbf{The Key Challenge(s) to be Overcome:} \\
 Lack of similar projects documented. \\
-Fairly niche/specialist/obscure software, mostly new territory. \\
+Fairly niche/specialist/obscure software, mostly new territory. 
 \newpage
 
 \section{Report on the Interim Review Meeting}
@@ -550,13 +584,6 @@ Any other recommendations as to the future direction of the project \\ \\
 \end{tabbing}
 Please give the student a photocopy of this form immediately after the review meeting; the original should be lodged in the School Office with Leanne Clyde
 \newpage
-
-
-\section{Diary Sheets (or other project management evidence)}
-Insert diary sheets here together with any project management plan you have
-
-\section{Appendix 4 and following}
-insert content here and for each of the other appendices, the title may be just on a page by itself, the pages of the appendices are not numbered, unless an included document such as a user manual or design document is itself pager numbered.
 \end{appendices}
 
 \end{document}
